@@ -1,0 +1,169 @@
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  width: 1240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+main .left {
+  position: relative;
+  width: 40%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+}
+main .left img {
+  position: absolute;
+  width: 150px;
+  left: 220px;
+  top: 130%;
+}
+main .left h1 {
+  font-size: 110px;
+  color: var(--black);
+  width: 105px;
+  height: 150px;
+  border-bottom: 4px solid var(--red);
+  margin: -10% 0 30px 0;
+  z-index: 1;
+}
+main .left h2 {
+  font-size: 35px;
+  color: var(--black);
+  margin: 0;
+  z-index: 1;
+}
+main .left p {
+  font-size: 22px;
+  color: var(--gray);
+  margin: 0 0 50px 0;
+  z-index: 1;
+}
+main .left a {
+  height: 52px;
+  width: 155px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background-color: var(--red);
+  color: var(--main1);
+  text-decoration: none;
+  font-size: 22px;
+  z-index: 1;
+}
+main .left a:hover {
+  height: 50px;
+  width: 170px;
+  margin: 2px 0 0 -7.5px;
+  letter-spacing: 3px;
+}
+main .right {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+main .right h1 {
+  position: absolute;
+  top: 15%;
+  right: 13%;
+  font-size: 280px;
+  color: var(--black);
+  transform: rotate(90deg);
+  z-index: 1;
+}
+main .right span {
+  color: #d7dbdf;
+  transform: rotate(90deg);
+}
+main .right .size-1 {
+  font-size: 40px;
+  margin: 70px 0 40px 0;
+}
+main .right .size-2 {
+  font-size: 33px;
+  margin: 20px 20px 120px 0;
+}
+main .right .size-3 {
+  font-size: 22px;
+  margin: 50px 0 100px 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+  main .left img {
+    width: 130px;
+    top: 120%;
+  }
+  main .left h1 {
+    font-size: 100px;
+    height: 132px;
+    width: 90px;
+    margin: -10% 0 20px 0;
+  }
+  main .left h2 {
+    font-size: 33px;
+  }
+  main .left p {
+    font-size: 19px;
+  }
+  main .left a {
+    height: 49px;
+    width: 142px;
+    font-size: 20px;
+  }
+  main .left a:hover {
+    height: 47px;
+    width: 152px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main {
+    width: 100%;
+  }
+  main .left {
+    width: 95%;
+  }
+  main .left img {
+    width: 110px;
+    top: 105%;
+    left: 200px;
+  }
+  main .left h1 {
+    font-size: 75px;
+    height: 105px;
+    width: 77px;
+    margin: -10% 0 15px 0;
+  }
+  main .left h2 {
+    font-size: 26px;
+  }
+  main .left p {
+    font-size: 16px;
+  }
+  main .left a {
+    height: 46px;
+    width: 133px;
+    font-size: 17px;
+  }
+  main .left a:hover {
+    height: 47px;
+    width: 152px;
+  }
+  main .right {
+    display: none;
+  }
+}/*# sourceMappingURL=error.css.map */

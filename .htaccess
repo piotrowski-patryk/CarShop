@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+ErrorDocument 404 https://localhost/carshop/404
+
+RewriteRule StronaGłówna index.php
+RewriteRule Polityka policy.php
+RewriteRule Logowanie loginPanel.php
+RewriteRule Zarządzanie managment.php
+RewriteRule EdycjaHasła passPanel.php
+RewriteRule ZmianaHasła passChangePanel.php
+RewriteRule Oferta offer.php
+RewriteRule 404 404.html

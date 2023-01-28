@@ -1,0 +1,187 @@
+/*-----------------| Footer |-----------------*/
+footer {
+  width: 1240px;
+  height: 350px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--gray);
+}
+footer .footer_top {
+  width: 96%;
+  height: 70%;
+  margin: 2% 2% 3% 2%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer_top .footer_top_left {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer_top .footer_top_left h1 {
+  color: var(--red);
+  font-size: 42px;
+  margin: 0 0 10px 0;
+}
+footer .footer_top .footer_top_left p {
+  color: var(--black);
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
+  font-weight: 300;
+}
+footer .footer_top .footer_top_right {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .footer_top .footer_top_right ul li {
+  font-size: 20px;
+  font-weight: 200;
+  color: var(--black);
+  list-style: none;
+}
+footer .footer_top .footer_top_right ul li a {
+  position: relative;
+  text-decoration: none;
+  color: var(--black);
+}
+footer .footer_top .footer_top_right ul li i {
+  font-size: 16px;
+  margin-right: 4px;
+}
+@media only screen and (max-width: 1240px) {
+  footer .footer_top .footer_top_left {
+    width: 30%;
+  }
+  footer .footer_top .footer_top_left h1 {
+    font-size: 39px;
+  }
+  footer .footer_top .footer_top_left p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  footer .footer_top .footer_top_right ul li {
+    font-size: 18px;
+  }
+  footer .footer_top .footer_top_right ul li i {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  footer .footer_top .footer_top_left {
+    width: 35%;
+  }
+  footer .footer_top .footer_top_left h1 {
+    font-size: 34px;
+  }
+  footer .footer_top .footer_top_left p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  footer .footer_top .footer_top_right ul li {
+    font-size: 16px;
+  }
+  footer .footer_top .footer_top_right ul li i {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer .footer_top {
+    height: 80%;
+    margin: 2% 3% 3% 3%;
+    flex-direction: column;
+  }
+  footer .footer_top .footer_top_left {
+    width: 100%;
+  }
+  footer .footer_top .footer_top_left h1 {
+    font-size: 28px;
+  }
+  footer .footer_top .footer_top_left p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  footer .footer_top .footer_top_right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  footer .footer_top .footer_top_right ul li {
+    font-size: 13px;
+    margin-left: -39px;
+  }
+  footer .footer_top .footer_top_right ul li i {
+    font-size: 13px;
+  }
+}
+footer .footer_bottom {
+  width: 96%;
+  height: 25%;
+  margin: 0 2% 0 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer_bottom h1 {
+  font-weight: 200;
+  color: var(--black);
+  font-size: 21px;
+}
+footer .footer_bottom a {
+  position: relative;
+  font-weight: 200;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 21px;
+  border-bottom: 1px solid var(--red);
+}
+footer .footer_bottom a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid var(--main1);
+  transition: 0.5s;
+}
+footer .footer_bottom a:hover::before {
+  transform: translateX(-100%);
+}
+@media only screen and (max-width: 1240px) {
+  footer .footer_bottom h1, footer .footer_bottom a {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  footer .footer_bottom h1, footer .footer_bottom a {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer .footer_bottom {
+    height: 15%;
+  }
+  footer .footer_bottom h1, footer .footer_bottom a {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  footer {
+    width: 1024px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  footer {
+    width: 768px;
+    height: 265px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer {
+    min-width: 320px;
+    max-width: 80%;
+    height: 300px;
+  }
+}/*# sourceMappingURL=footer.css.map */

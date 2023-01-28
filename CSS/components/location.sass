@@ -1,0 +1,84 @@
+/*----------------| Location |----------------*/
+.location
+    width: 1240px
+    height: 400px
+    margin: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    h1
+        text-align: center
+        font-size: 45px
+        line-height: 60px
+        margin-top: -10px
+
+    a
+        width: 210px
+        height: 57px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: var(--red)
+        color: var(--main1)
+        text-decoration: none
+        font-size: 24px
+        border-radius: 14px
+        i
+            margin-right: 10px
+            font-size: 26px
+
+    a:hover
+        cursor: pointer
+        transform: scale(1.025)
+
+// Location (1240px - 1024px)
+@media only screen and (max-width: 1240px)
+    .location
+        width: 1024px
+        height: 340px
+        h1
+            font-size: 35px
+            line-height: 50px
+
+        a
+            width: 180px
+            height: 53px
+            font-size: 22px
+            i
+                margin-right: 9px
+                font-size: 22px
+
+// Location (1024px - 768px)
+@media only screen and (max-width: 1024px)
+    .location
+        width: 768px
+        height: 280px
+        h1
+            font-size: 25px
+            line-height: 40px
+
+        a
+            width: 155px
+            height: 49px
+            font-size: 18px
+            i
+                margin-right: 7px
+                font-size: 18px
+
+// Location (768px - 320px)
+@media only screen and (max-width: 768px)
+    .location
+        width: 320px
+        height: 230px
+        h1
+            font-size: 18px
+            line-height: 28px
+
+        a
+            width: 120px
+            height: 42px
+            font-size: 16px
+            i
+                margin-right: 5px
+                font-size: 17px

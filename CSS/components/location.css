@@ -1,0 +1,94 @@
+/*----------------| Location |----------------*/
+.location {
+  width: 1240px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.location h1 {
+  text-align: center;
+  font-size: 45px;
+  line-height: 60px;
+  margin-top: -10px;
+}
+.location a {
+  width: 210px;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red);
+  color: var(--main1);
+  text-decoration: none;
+  font-size: 24px;
+  border-radius: 14px;
+}
+.location a i {
+  margin-right: 10px;
+  font-size: 26px;
+}
+.location a:hover {
+  cursor: pointer;
+  transform: scale(1.025);
+}
+
+@media only screen and (max-width: 1240px) {
+  .location {
+    width: 1024px;
+    height: 340px;
+  }
+  .location h1 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .location a {
+    width: 180px;
+    height: 53px;
+    font-size: 22px;
+  }
+  .location a i {
+    margin-right: 9px;
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .location {
+    width: 768px;
+    height: 280px;
+  }
+  .location h1 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .location a {
+    width: 155px;
+    height: 49px;
+    font-size: 18px;
+  }
+  .location a i {
+    margin-right: 7px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .location {
+    width: 320px;
+    height: 230px;
+  }
+  .location h1 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .location a {
+    width: 120px;
+    height: 42px;
+    font-size: 16px;
+  }
+  .location a i {
+    margin-right: 5px;
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=location.css.map */

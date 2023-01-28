@@ -1,0 +1,32 @@
+body, html {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: var(--main1);
+  font-family: "Saira Condensed", sans-serif;
+  --main1: #ffffff;
+  --main2: #eff1f3;
+  --red: #e02021;
+  --black: #2e3034;
+  --gray: #4C5367;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--Main1);
+}
+
+::-webkit-scrollbar-track {
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+  border-radius: 10px;
+}/*# sourceMappingURL=general.css.map */

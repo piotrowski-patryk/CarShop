@@ -1,0 +1,145 @@
+/*------------------| Nav |------------------*/
+nav
+    width: 100%
+    height: 40px
+    margin: 20px auto 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    // Nav > Logo
+    > a
+        color: var(--red)
+        font-size: 43px
+        font-weight: bold
+        text-decoration: none
+        margin-top: -7px
+
+    > a:hover
+        cursor: pointer
+        transform: scale(1.03)
+
+    // Nav > Menu
+    .nav_menu
+        display: flex
+        width: 510px
+        align-items: center
+        justify-content: space-between
+        list-style: none
+        li a
+            font-size: 27px
+            color: var(--black)
+            font-weight: 500
+            text-decoration: none
+            i
+                color: var(--gray)
+
+        li:hover
+            cursor: pointer
+            transform: scale(1.04)
+            text-shadow: 0 0 5px var(--red)
+
+    // Nav > Menu (1300px)
+    @media only screen and (max-width: 1300px)
+        .nav_menu
+            display: none
+            li
+                margin: 10px
+                a
+                    font-size: 34px
+
+        > a
+            font-size: 41px
+
+    // Nav > Menu (1024px)
+    @media only screen and (max-width: 1024px)
+        .nav_menu li
+            margin: 8px
+            a
+                font-size: 30px
+
+    // Nav > Menu (768px)
+    @media only screen and (max-width: 768px)
+        .nav_menu li
+            margin: 6px
+            a
+                font-size: 26px
+
+        > a
+            font-size: 35px
+
+    // Nav > burgerIcon
+    #burgerIcon
+        width: 50px
+        height: 45px
+        display: none
+        flex-direction: column
+        justify-content: space-around
+        background-color: #00000000
+        border: 0
+        outline: none
+        .burgerIcon_bar1
+            width: 100%
+            height: 5px
+            background-color: var(--black)
+            border-radius: 12px
+
+        .burgerIcon_bar2
+            width: 75%
+            height: 5px
+            margin-left: 25%
+            background-color: var(--black)
+            border-radius: 12px
+
+    .burgerActive#burgerIcon
+        z-index: 5
+        position: fixed
+        right: 2%
+
+    .burgerActive#burgerIcon .burgerIcon_bar2,
+    .burgerActive#burgerIcon .burgerIcon_bar1
+        background-color: crimson
+
+    #burgerIcon:hover
+        cursor: pointer
+        transform: scale(1.05)
+
+    #burgerIcon:hover > .burgerIcon_bar2
+        margin-left: 35%
+
+    // Nav > burgerIcon (1300px)
+    @media only screen and (max-width: 1300px)
+        #burgerIcon
+            display: flex
+
+    // Nav > burgerIcon (768px - 320px)
+    @media only screen and (max-width: 768px)
+        #burgerIcon
+            width: 47px
+            height: 40px
+            .burgerIcon_bar1,.burgerIcon_bar2
+                height: 4.4px
+
+// Nav (1300px)
+@media only screen and (max-width: 1300px)
+    nav
+        width: 97%
+
+// Nav (768px - 320px)
+@media only screen and (max-width: 768px)
+    nav
+        margin: 8px auto 0 auto
+
+
+/*--------------| Burger Menu |--------------*/
+nav .burgerActive.nav_menu
+    position: fixed
+    width: 100%
+    height: 100%
+    left: -40px
+    top: -16px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background-color: var(--main2)
+    z-index: 5

@@ -1,0 +1,447 @@
+// header
+header
+    display: flex
+    width: 1240px
+    margin: auto
+
+// header (1240px)
+@media only screen and (max-width: 1240px)
+    header
+        width: 100%
+
+// main
+main
+    width: 1240px
+    min-height: 600px
+    max-height: max-content
+    margin: 70px auto 80px auto
+    display: flex
+    justify-content: space-between
+    .managment_left
+        width: 48%
+        height: 100%
+        display: flex
+        flex-direction: column
+
+        // Edit information on header
+        #managment_infoEdit
+            position: relative
+            width: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-bottom: 70px
+            i
+                position: absolute
+                left: 15px
+                font-size: 28px
+                color: var(--gray)
+
+            input
+                box-sizing: border-box
+                width: 77%
+                height: 62px
+                margin-right: 3%
+                border-radius: 40px
+                background-color: var(--main2)
+                font-size: 19px
+                color: var(--black)
+                outline: none
+                border: 0
+                padding: 0 17px 0 58px
+
+            button
+                box-sizing: border-box
+                width: 20%
+                height: 62px
+                background-color: var(--gray)
+                border-radius: 40px
+                outline: none
+                border: 0
+                color: var(--main1)
+                font-weight: 300
+                font-size: 19px
+
+            button:hover
+                cursor: pointer
+                transform: scale(1.02)
+
+            // main > Info edit (1240px - 1024px)
+            @media only screen and (max-width: 1240px)
+                i
+                    font-size: 23px
+
+                input
+                    height: 50px
+                    font-size: 17px
+                    padding: 0 17px 0 52px
+
+                button
+                    height: 50px
+                    font-size: 17px
+
+            // main > Info edit (1024px - 768px)
+            @media only screen and (max-width: 1024px)
+                i
+                    font-size: 20px
+
+                input
+                    height: 41px
+                    font-size: 13px
+                    padding: 0 10px 0 44px
+
+                button
+                    height: 41px
+                    font-size: 13px
+
+        // main > Info edit (768px - 320px)
+        @media only screen and (max-width: 768px)
+            #managment_infoEdit
+                margin-bottom: 45px
+
+        // Edit users
+        #managment_users
+            width: 100%
+            height: max-content
+            display: flex
+            flex-direction: column
+            .users-tableTitle
+                box-sizing: border-box
+                width: 100%
+                height: 60px
+                display: flex
+                margin-bottom: -20px
+                padding: 0 20px 0 20px
+                span
+                    color: var(--gray)
+                    i
+                        margin-left: 5px
+
+            .users-item
+                box-sizing: border-box
+                width: 100%
+                height: 60px
+                display: flex
+                align-items: center
+                margin-bottom: 20px
+                background-color: var(--main2)
+                padding: 0 20px 0 20px
+                span
+                    font-size: 21px
+
+                a, button
+                    width: 90px
+                    height: 38px
+                    border-radius: 22px
+                    background-color: var(--red)
+                    color: var(--main2)
+                    font-size: 18px
+                    text-decoration: none
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    outline: 0
+                    border: 0
+                    font-family: 'Saira Condensed', sans-serif
+                    i
+                        margin-left: 7px
+                        font-size: 15px
+
+                a:hover, button:hover
+                    cursor: pointer
+                    transform: scale(1.03)
+
+                .users-item_active
+                    width: 25%
+                    font-size: 21px
+                    color: lightgreen
+
+                .users-item_inactive
+                    width: 25%
+                    font-size: 21px
+                    color: var(--red)
+
+                input
+                    width: 40%
+                    height: 30px
+                    background-color: #00000000
+                    outline: 0
+                    border: 0
+                    border-bottom: 1px dashed var(--gray)
+                    font-size: 21px
+                    padding: 0 20px 0 20px
+                    margin-right: 31%
+
+            // main > Users edit (1240px - 1024px)
+            @media only screen and (max-width: 1240px)
+                .users-tableTitle span
+                    font-size: 14px
+
+                .users-item
+                    height: 55px
+                    span, .users-item_active, .users-item_inactive
+                        font-size: 18px
+
+                    a, button
+                        width: 84px
+                        height: 34px
+                        font-size: 16px
+                        i
+                            font-size: 12px
+
+                    input
+                        margin-right: 32%
+                        font-size: 18px
+                        padding: 0 14px 0 14px
+
+            // main > Users edit (1024px - 768px)
+            @media only screen and (max-width: 1024px)
+                .users-tableTitle
+                    margin-bottom: -31px
+                    span
+                        font-size: 12px
+
+                .users-item
+                    height: 42px
+                    margin-bottom: 15px
+                    span, .users-item_active, .users-item_inactive
+                        font-size: 13px
+
+                    a, button
+                        width: 75px
+                        height: 28px
+                        font-size: 13px
+                        i
+                            font-size: 11px
+
+                    input
+                        height: 23px
+                        margin-right: 32%
+                        font-size: 13px
+                        padding: 0 10px 0 10px
+
+    // main > left (768px - 320px)
+    @media only screen and (max-width: 768px)
+        .managment_left
+            width: 100%
+
+    .managment_right
+        width: 48%
+        height: 700px
+        display: flex
+        flex-direction: column
+        overflow-y: scroll
+        // Items for offers
+        .managment_right_item
+            position: relative
+            box-sizing: border-box
+            width: 99%
+            background-color: var(--red)
+            border-radius: 22px
+            display: flex
+            flex-direction: column
+            padding: 20px 30px 30px 40px
+            margin: 0 1% 22px 0
+            h1
+                height: max-content
+                min-width: 360px
+                max-width: max-content
+                color: var(--main1)
+                border-bottom: 3px solid var(--main1)
+                margin: 0
+                input
+                    width: 130px
+                    background-color: #00000000
+                    outline: none
+                    border: none
+                    color: var(--main1)
+                    font-weight: bold
+                    font-size: 30px
+
+                input::placeholder
+                    color: var(--gray)
+
+            #editOffer
+                position: absolute
+                color: var(--main1)
+                background-color: #00000000
+                border: none
+                outline: none
+                font-size: 28px
+                top: 17px
+                right: 17px
+
+            #deleteOffer
+                position: absolute
+                color: var(--main1)
+                background-color: #00000000
+                border: none
+                outline: none
+                font-size: 36px
+                top: 5.4px
+                right: 80px
+
+            #deleteOffer:hover, #editOffer:hover
+                transform: scale(1.02)
+                cursor: pointer
+
+            .right_item_content
+                width: 100%
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+                margin-top: 5px
+                div
+                    color: var(--main1)
+                    font-size: 24px
+                    margin-top: 30px
+                    display: flex
+                    i
+                        margin-right: 12px
+
+                    input, select
+                        width: 100%
+                        background-color: #00000000
+                        outline: none
+                        border: 1px solid var(--red)
+                        color: var(--main1)
+                        font-weight: 400
+                        font-size: 20px
+                        option
+                            background-color: var(--gray)
+
+                    input::placeholder
+                        color: var(--gray)
+
+                    select:hover
+                        cursor: pointer
+
+                    label
+                        margin-top: -4px
+                        span
+                            cursor: pointer
+                            font-size: 22px
+
+                        #inputFile
+                            display: none
+                            background-color: blue
+
+                .input-Fuel
+                    width: 35%
+
+                .input-Space
+                    width: 11%
+
+                .input-Body
+                    width: 35%
+
+                .input-Gearbox
+                    width: 37%
+
+                .input-AirConditioning
+                    width: 22%
+
+                .input-Picture
+                    width: 32%
+
+    // main > Offer edit (1240px - 1024px)
+    @media only screen and (max-width: 1240px)
+        .managment_right
+            height: 650px
+            .managment_right_item
+                h1
+                    font-size: 24px
+                    min-width: 270px
+                    input
+                        width: 100px
+                        font-size: 22px
+
+                #editOffer
+                    font-size: 25px
+                    top: 22px
+
+                #deleteOffer
+                    font-size: 33px
+                    top: 11.7px
+                    right: 75px
+
+                .right_item_content div
+                    i
+                        margin-right: 8px
+                        font-size: 19px
+
+                    input, select
+                        font-size: 16px
+
+                    label
+                        margin-top: -5px
+                        span
+                            font-size: 18px
+
+    // main > Offer edit (1024px - 768px)
+    @media only screen and (max-width: 1024px)
+        .managment_right
+            height: 515px
+            margin: 35px 0 35px 0
+            .managment_right_item
+                padding: 15px 20px 25px 20px
+                h1
+                    font-size: 19px
+                    min-width: 200px
+                    border-bottom: 2px solid var(--main1)
+                    input
+                        width: 70px
+                        font-size: 18px
+
+                #editOffer
+                    font-size: 20px
+                    top: 20px
+                    right: 10px
+
+                #deleteOffer
+                    font-size: 27px
+                    top: 10.4px
+                    right: 56px
+
+                .right_item_content div
+                    margin-top: 20px
+                    i
+                        margin-right: 5px
+                        font-size: 16px
+
+                    input, select
+                        font-size: 13px
+
+                    label
+                        margin-top: -7px
+                        span
+                            font-size: 14px
+
+    // main > right (768px - 320px)
+    @media only screen and (max-width: 768px)
+        .managment_right
+            width: 100%
+
+// main (1240px - 1024px)
+@media only screen and (max-width: 1240px)
+    main
+        width: 1024px
+
+// main (1024px - 768px)
+@media only screen and (max-width: 1024px)
+    main
+        width: 768px
+        margin: 70px auto 10px auto
+
+// main (768px - 420px)
+@media only screen and (max-width: 768px)
+    main
+        width: 80%
+        flex-direction: column
+        margin-top: 30px
+
+// main (420px - 320px)
+@media only screen and (max-width: 420px)
+    main
+        width: 95%
+        flex-direction: column

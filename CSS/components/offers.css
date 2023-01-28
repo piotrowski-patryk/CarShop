@@ -1,0 +1,301 @@
+/*-----------------| Offers |-----------------*/
+.offers {
+  width: 100%;
+  height: 620px;
+  background-color: var(--main2);
+  margin-top: 70px;
+  border-bottom: 2px solid var(--gray);
+}
+.offers > div {
+  position: relative;
+  height: 100%;
+  width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.offers > div > img {
+  position: absolute;
+  width: 220px;
+  bottom: 3%;
+  left: 0;
+}
+.offers > div > i {
+  position: absolute;
+  top: -12%;
+  right: 33%;
+  transform: rotate(-25deg);
+  font-size: 260px;
+  color: #d7dbdf;
+}
+.offers > div .offers_text {
+  width: 94%;
+  height: 55px;
+  margin: 40px 0 0 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.offers > div .offers_text h1 {
+  font-size: 60px;
+  color: var(--black);
+  margin: 0;
+  z-index: 1;
+}
+.offers > div .offers_text div {
+  height: 55px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.offers > div .offers_text div button {
+  width: 75px;
+  height: 55px;
+  background-color: var(--red);
+  border: 0;
+  outline: none;
+  color: var(--main2);
+  font-size: 30px;
+  border-radius: 8px;
+  z-index: 1;
+}
+.offers > div .offers_text div button:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+@media only screen and (max-width: 1240px) {
+  .offers > div .offers_text {
+    height: 47px;
+    margin: 35px 0 0 3%;
+  }
+  .offers > div .offers_text h1 {
+    font-size: 45px;
+  }
+  .offers > div .offers_text div {
+    height: 47px;
+    width: 170px;
+  }
+  .offers > div .offers_text div button {
+    width: 65px;
+    height: 47px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .offers > div .offers_text {
+    height: 40px;
+    margin: 25px 0 0 3%;
+  }
+  .offers > div .offers_text h1 {
+    font-size: 31px;
+  }
+  .offers > div .offers_text div {
+    height: 40px;
+    width: 148px;
+  }
+  .offers > div .offers_text div button {
+    width: 57px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .offers > div .offers_text {
+    height: 35px;
+    margin: 15px 0 0 3%;
+  }
+  .offers > div .offers_text h1 {
+    font-size: 25px;
+  }
+  .offers > div .offers_text div {
+    height: 35px;
+    width: 115px;
+  }
+  .offers > div .offers_text div button {
+    width: 47px;
+    height: 35px;
+    font-size: 22px;
+  }
+}
+.offers > div .offers_pictures {
+  width: 94%;
+  height: 400px;
+  margin: 60px 0 0 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.offers > div .offers_pictures .offers_pictures_item {
+  position: relative;
+  height: 100%;
+  width: 340px;
+  border-radius: 22px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+}
+.offers > div .offers_pictures .offers_pictures_item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 22px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.offers > div .offers_pictures .offers_pictures_item h1 {
+  position: absolute;
+  bottom: -5px;
+  left: 25px;
+  color: var(--main2);
+  font-weight: normal;
+  z-index: 1;
+}
+.offers > div .offers_pictures .offers_pictures_item div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background-color: rgba(76, 83, 103, 0.8078431373);
+  opacity: 0;
+  transition: 0.7s;
+}
+.offers > div .offers_pictures .offers_pictures_item div i {
+  font-size: 120px;
+  color: var(--main2);
+  opacity: 0.8;
+  margin: 0;
+}
+.offers > div .offers_pictures .offers_pictures_item:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+.offers > div .offers_pictures .offers_pictures_item:hover > div {
+  opacity: 1;
+}
+.offers > div .offers_pictures #offer_item1, .offers > div .offers_pictures #offer_item2, .offers > div .offers_pictures #offer_item3 {
+  display: flex;
+}
+@media only screen and (max-width: 1240px) {
+  .offers > div .offers_pictures {
+    height: 350px;
+    margin: 40px 0 0 3%;
+  }
+  .offers > div .offers_pictures .offers_pictures_item {
+    width: 280px;
+  }
+  .offers > div .offers_pictures .offers_pictures_item h1 {
+    font-size: 22px;
+    bottom: -7px;
+    left: 22px;
+  }
+  .offers > div .offers_pictures .offers_pictures_item div i {
+    font-size: 95px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .offers > div .offers_pictures {
+    height: 280px;
+    margin: 30px 0 0 3%;
+  }
+  .offers > div .offers_pictures .offers_pictures_item {
+    width: 210px;
+  }
+  .offers > div .offers_pictures .offers_pictures_item h1 {
+    font-size: 18px;
+    bottom: -8px;
+    left: 18px;
+  }
+  .offers > div .offers_pictures .offers_pictures_item div i {
+    font-size: 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .offers > div .offers_pictures {
+    height: 250px;
+    margin: 27px 0 0 3%;
+  }
+  .offers > div .offers_pictures .offers_pictures_item {
+    width: 180px;
+  }
+  .offers > div .offers_pictures .offers_pictures_item h1 {
+    font-size: 16px;
+    bottom: -9px;
+    left: 15px;
+  }
+  .offers > div .offers_pictures .offers_pictures_item div i {
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 645px) {
+  .offers > div .offers_pictures {
+    position: absolute;
+    height: 250px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 77px 0 0 3%;
+  }
+  .offers > div .offers_pictures .offers_pictures_item {
+    width: 200px;
+    margin-right: 3%;
+  }
+  .offers > div .offers_pictures .offers_pictures_item h1 {
+    font-size: 16px;
+    bottom: -9px;
+    left: 15px;
+  }
+  .offers > div .offers_pictures .offers_pictures_item div i {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .offers {
+    height: 510px;
+  }
+  .offers div {
+    width: 1024px;
+  }
+  .offers div > img {
+    width: 180px;
+  }
+  .offers div > i {
+    font-size: 245px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .offers {
+    height: 410px;
+  }
+  .offers div {
+    width: 768px;
+  }
+  .offers div > img {
+    width: 150px;
+  }
+  .offers div > i {
+    font-size: 240px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .offers {
+    height: 355px;
+  }
+  .offers div {
+    width: 98%;
+  }
+  .offers div > img {
+    width: 140px;
+  }
+  .offers div > i {
+    font-size: 180px;
+  }
+}/*# sourceMappingURL=offers.css.map */

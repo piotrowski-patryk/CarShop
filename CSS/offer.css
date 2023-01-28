@@ -1,0 +1,352 @@
+header {
+  display: flex;
+  width: 1240px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1240px) {
+  header {
+    width: 100%;
+  }
+}
+main {
+  box-sizing: border-box;
+  width: 1240px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 50px auto 100px auto;
+  display: flex;
+  flex-direction: column;
+}
+main .offer_top {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 540px;
+  padding: 40px 0 40px 0;
+}
+main .offer_top .offer_top_img {
+  height: 100%;
+  width: 48%;
+}
+main .offer_top .offer_top_data {
+  height: 100%;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+main .offer_top .offer_top_data .offer_top_data_item {
+  box-sizing: border-box;
+  min-height: 75px;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 35px 15px 35px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--black);
+}
+main .offer_top .offer_top_data .offer_top_data_item > h1 {
+  color: var(--black);
+  margin: 0;
+}
+main .offer_top .offer_top_data .offer_top_data_item .data_item_icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: 1px solid var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .offer_top .offer_top_data .offer_top_data_item .data_item_icon i {
+  color: var(--black);
+  font-size: 20px;
+}
+main .offer_top .offer_top_data .offer_top_data_item .data_item_icon:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+main .offer_top .offer_top_data .offer_top_data_item .data_item_content {
+  width: 100%;
+  height: 150px;
+  display: none;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin: 2% 0 0 5%;
+}
+main .offer_top .offer_top_data .offer_top_data_item .data_item_content div {
+  width: 30%;
+  display: block;
+}
+main .offer_top .offer_top_data .offer_top_data_item .data_item_content div span {
+  margin: 0;
+  color: var(--gray);
+  font-size: 14px;
+}
+main .offer_top .offer_top_data .offer_top_data_item .data_item_content div h1 {
+  margin: -5px 0 0 0;
+  font-size: 24px;
+  font-weight: normal;
+}
+main .offer_top .offer_top_data #offerInfo-1 > .data_item_content {
+  display: flex;
+}
+main .offer_top .offer_top_data .offer_top_data_item:hover {
+  cursor: pointer;
+  background-color: var(--main2);
+}
+@media only screen and (max-width: 1240px) {
+  main .offer_top {
+    height: 450px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item {
+    min-height: 60px;
+    margin-bottom: 22px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item h1 {
+    font-size: 22px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_icon {
+    width: 27px;
+    height: 27px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_icon i {
+    font-size: 17px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_content {
+    height: 120px;
+    margin-top: 1%;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_content div span {
+    font-size: 12px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_content div h1 {
+    margin-top: -7px;
+    font-size: 21px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  main .offer_top {
+    height: 350px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item {
+    min-height: 20px;
+    margin-bottom: 0px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item h1 {
+    font-size: 19px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_icon {
+    width: 22px;
+    height: 22px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_icon i {
+    font-size: 15px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_content {
+    height: 90px;
+    margin-top: 1%;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_content div span {
+    font-size: 10px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_content div h1 {
+    margin-top: -8px;
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .offer_top {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    flex-direction: column;
+  }
+  main .offer_top .offer_top_img {
+    width: 100%;
+  }
+  main .offer_top .offer_top_data {
+    width: 100%;
+    margin-top: 30px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item h1 {
+    font-size: 16px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_icon {
+    width: 20px;
+    height: 20px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_icon i {
+    font-size: 13px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_content {
+    height: 85px;
+    margin-top: 1%;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_content div span {
+    font-size: 10px;
+  }
+  main .offer_top .offer_top_data .offer_top_data_item .data_item_content div h1 {
+    margin-top: -7px;
+    font-size: 16px;
+  }
+}
+main .offer_bottom {
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .offer_bottom form {
+  position: relative;
+  width: 100%;
+}
+main .offer_bottom form button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: var(--gray);
+}
+main .offer_bottom form button i {
+  font-size: 28px;
+  margin-right: 5px;
+}
+main .offer_bottom form button:hover {
+  cursor: pointer;
+  transform: scale(1.018);
+}
+main .offer_bottom table, main .offer_bottom form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+main .offer_bottom table tr, main .offer_bottom form table tr {
+  height: 50px;
+  text-align: center;
+  font-size: 22px;
+}
+main .offer_bottom table tr th, main .offer_bottom form table tr th {
+  color: var(--black);
+  font-weight: 500;
+}
+main .offer_bottom table tr td, main .offer_bottom form table tr td {
+  color: var(--gray);
+  font-weight: 300;
+}
+main .offer_bottom table tr td input, main .offer_bottom form table tr td input {
+  width: 80px;
+  height: 33px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  outline: 0;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  font-family: "Saira Condensed", sans-serif;
+  color: var(--gray);
+}
+main .offer_bottom table .offerTable-dark, main .offer_bottom form table .offerTable-dark {
+  background-color: var(--main2);
+}
+@media only screen and (max-width: 1240px) {
+  main .offer_bottom {
+    height: 230px;
+  }
+  main .offer_bottom form button {
+    font-size: 18px;
+  }
+  main .offer_bottom form button i {
+    font-size: 22px;
+  }
+  main .offer_bottom table tr, main .offer_bottom form table tr {
+    height: 42px;
+    font-size: 19px;
+  }
+  main .offer_bottom table tr td input, main .offer_bottom form table tr td input {
+    font-size: 19px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  main .offer_bottom {
+    height: 160px;
+  }
+  main .offer_bottom form button {
+    font-size: 16px;
+  }
+  main .offer_bottom form button i {
+    font-size: 20px;
+  }
+  main .offer_bottom table tr, main .offer_bottom form table tr {
+    height: 37px;
+    font-size: 16px;
+  }
+  main .offer_bottom table tr td input, main .offer_bottom form table tr td input {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  main .offer_bottom {
+    height: 190px;
+  }
+  main .offer_bottom form button {
+    font-size: 14px;
+    bottom: -25px;
+  }
+  main .offer_bottom form button i {
+    font-size: 16px;
+  }
+  main .offer_bottom table tr, main .offer_bottom form table tr {
+    height: 45px;
+    font-size: 12px;
+  }
+  main .offer_bottom table tr td input, main .offer_bottom form table tr td input {
+    font-size: 12px;
+    width: 40px;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  main {
+    width: 1024px;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  main {
+    width: 768px;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main {
+    width: 80%;
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  main {
+    width: 96%;
+    margin-top: 5px;
+  }
+}/*# sourceMappingURL=offer.css.map */

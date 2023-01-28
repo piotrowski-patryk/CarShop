@@ -1,0 +1,161 @@
+body, html
+    height: 100%
+    overflow: hidden
+
+// 404
+main
+    height: 100%
+    width: 1240px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: auto
+    .left
+        position: relative
+        width: 40%
+        height: max-content
+        margin-left: 10%
+        display: flex
+        flex-direction: column
+        img
+            position: absolute
+            width: 150px
+            left: 220px
+            top: 130%
+
+        h1
+            font-size: 110px
+            color: var(--black)
+            width: 105px
+            height: 150px
+            border-bottom: 4px solid var(--red)
+            margin: -10% 0 30px 0
+            z-index: 1
+
+        h2
+            font-size: 35px
+            color: var(--black)
+            margin: 0
+            z-index: 1
+
+        p
+            font-size: 22px
+            color: var(--gray)
+            margin: 0 0 50px 0
+            z-index: 1
+
+        a
+            height: 52px
+            width: 155px
+            margin: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 6px
+            background-color: var(--red)
+            color: var(--main1)
+            text-decoration: none
+            font-size: 22px
+            z-index: 1
+
+        a:hover
+            height: 50px
+            width: 170px
+            margin: 2px 0 0 -7.5px
+            letter-spacing: 3px
+
+    .right
+        position: relative
+        width: 50%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        flex-wrap: wrap
+        h1
+            position: absolute
+            top: 15%
+            right: 13%
+            font-size: 280px
+            color: var(--black)
+            transform: rotate(90deg)
+            z-index: 1
+
+        span
+            color: #d7dbdf
+            transform: rotate(90deg)
+
+        .size-1
+            font-size: 40px
+            margin: 70px 0 40px 0
+
+        .size-2
+            font-size: 33px
+            margin: 20px 20px 120px 0
+
+        .size-3
+            font-size: 22px
+            margin: 50px 0 100px 10px
+
+// 404 (1024px - 768px)
+@media only screen and (max-width: 1024px)
+    main .left
+        img
+            width: 130px
+            top: 120%
+
+        h1
+            font-size: 100px
+            height: 132px
+            width: 90px
+            margin: -10% 0 20px 0
+
+        h2
+            font-size: 33px
+
+        p
+            font-size: 19px
+
+        a
+            height: 49px
+            width: 142px
+            font-size: 20px
+
+        a:hover
+            height: 47px
+            width: 152px
+
+// 404 (768px - 320px)
+@media only screen and (max-width: 768px)
+    main
+        width: 100%
+        .left
+            width: 95%
+            img
+                width: 110px
+                top: 105%
+                left: 200px
+
+            h1
+                font-size: 75px
+                height: 105px
+                width: 77px
+                margin: -10% 0 15px 0
+
+            h2
+                font-size: 26px
+
+            p
+                font-size: 16px
+
+            a
+                height: 46px
+                width: 133px
+                font-size: 17px
+
+            a:hover
+                height: 47px
+                width: 152px
+
+        .right
+            display: none

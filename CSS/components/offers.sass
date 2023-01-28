@@ -1,0 +1,271 @@
+/*-----------------| Offers |-----------------*/
+.offers
+    width: 100%
+    height: 620px
+    background-color: var(--main2)
+    margin-top: 70px
+    border-bottom: 2px solid var(--gray)
+    > div
+        position: relative
+        height: 100%
+        width: 1240px
+        margin: auto
+        display: flex
+        flex-direction: column
+        > img
+            position: absolute
+            width: 220px
+            bottom: 3%
+            left: 0
+
+        > i
+            position: absolute
+            top: -12%
+            right: 33%
+            transform: rotate(-25deg)
+            font-size: 260px
+            color: #d7dbdf
+
+        // Offers > text
+        .offers_text
+            width: 94%
+            height: 55px
+            margin: 40px 0 0 3%
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            h1
+                font-size: 60px
+                color: var(--black)
+                margin: 0
+                z-index: 1
+            div
+                height: 55px
+                width: 200px
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                button
+                    width: 75px
+                    height: 55px
+                    background-color: var(--red)
+                    border: 0
+                    outline: none
+                    color: var(--main2)
+                    font-size: 30px
+                    border-radius: 8px
+                    z-index: 1
+
+                button:hover
+                    cursor: pointer
+                    transform: scale(1.03)
+
+        // Offers > text (1240px - 1024px)
+        @media only screen and (max-width: 1240px)
+            .offers_text
+                height: 47px
+                margin: 35px 0 0 3%
+                h1
+                    font-size: 45px
+                
+                div
+                    height: 47px
+                    width: 170px
+                    button
+                        width: 65px
+                        height: 47px
+
+        // Offers > text (1024px - 768px)
+        @media only screen and (max-width: 1024px)
+            .offers_text
+                height: 40px
+                margin: 25px 0 0 3%
+                h1
+                    font-size: 31px
+                
+                div
+                    height: 40px
+                    width: 148px
+                    button
+                        width: 57px
+                        height: 40px
+                        font-size: 24px
+
+        // Offers > text (768px - 320px)
+        @media only screen and (max-width: 768px)
+            .offers_text
+                height: 35px
+                margin: 15px 0 0 3%
+                h1
+                    font-size: 25px
+                
+                div
+                    height: 35px
+                    width: 115px
+
+                    button
+                        width: 47px
+                        height: 35px
+                        font-size: 22px
+
+        // Offers > pictures
+        .offers_pictures
+            width: 94%
+            height: 400px
+            margin: 60px 0 0 3%
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            .offers_pictures_item
+                position: relative
+                height: 100%
+                width: 340px
+                border-radius: 22px
+                display: none
+                align-items: center
+                justify-content: center
+                background-color: red
+                img
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    top: 0
+                    left: 0
+                    border-radius: 22px
+                    object-fit: cover
+
+                h1
+                    position: absolute
+                    bottom: -5px
+                    left: 25px
+                    color: var(--main2)
+                    font-weight: normal
+                    z-index: 1
+
+                div
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 22px
+                    background-color: #4c5367ce
+                    opacity: 0
+                    transition: 0.7s
+                    i
+                        font-size: 120px
+                        color: var(--main2)
+                        opacity: 0.8
+                        margin: 0
+
+            .offers_pictures_item:hover
+                cursor: pointer
+                transform: scale(1.01)
+
+            .offers_pictures_item:hover > div
+                opacity: 1
+
+            #offer_item1, #offer_item2, #offer_item3
+                display: flex
+
+        // Offers > pictures (1240px - 1024px)
+        @media only screen and (max-width: 1240px)
+            .offers_pictures
+                height: 350px
+                margin: 40px 0 0 3%
+                .offers_pictures_item
+                    width: 280px
+                    h1
+                        font-size: 22px
+                        bottom: -7px
+                        left: 22px
+
+                    div i
+                        font-size: 95px
+
+        // Offers > pictures (1024px - 768px)
+        @media only screen and (max-width: 1024px)
+            .offers_pictures
+                height: 280px
+                margin: 30px 0 0 3%
+                .offers_pictures_item
+                    width: 210px
+                    h1
+                        font-size: 18px
+                        bottom: -8px
+                        left: 18px
+
+                    div i
+                        font-size: 70px
+
+        // Offers > pictures (768px - 450px)
+        @media only screen and (max-width: 768px)
+            .offers_pictures
+                height: 250px
+                margin: 27px 0 0 3%
+                .offers_pictures_item
+                    width: 180px
+                    h1
+                        font-size: 16px
+                        bottom: -9px
+                        left: 15px
+
+                    div i
+                        font-size: 60px
+
+        // Offers > pictures (450px - 320px)
+        @media only screen and (max-width: 645px)
+            .offers_pictures
+                position: absolute
+                height: 250px
+                width: max-content
+                margin: 77px 0 0 3%
+                .offers_pictures_item
+                    width: 200px
+                    margin-right: 3%
+                    h1
+                        font-size: 16px
+                        bottom: -9px
+                        left: 15px
+
+                    div i
+                        font-size: 60px
+
+// Offers (1240px - 1024px)
+@media only screen and (max-width: 1240px)
+    .offers
+        height: 510px
+        div
+            width: 1024px
+            > img
+                width: 180px
+
+            > i
+                font-size: 245px
+
+// Offers (1024px - 768px)
+@media only screen and (max-width: 1024px)
+    .offers
+        height: 410px
+        div
+            width: 768px
+            > img
+                width: 150px
+
+            > i
+                font-size: 240px
+
+// Offers (768px - 320px)
+@media only screen and (max-width: 768px)
+    .offers
+        height: 355px
+        div
+            width: 98%
+            > img
+                width: 140px
+
+            > i
+                font-size: 180px

@@ -1,0 +1,270 @@
+/*-----------------| Header |-----------------*/
+header
+    width: 100%
+    height: 850px
+    background: rgb(239,241,243)
+    background: radial-gradient(circle, rgba(239,241,243,1) 90%, rgba(224,32,33,0.5172443977591037) 100%)
+
+    // Header > Content
+    > div
+        width: 1240px
+        height: 100%
+        margin: auto
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        // Content > Left
+        #header_left
+            width: 48%
+            height: 780px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            animation: HeaderLeftLoading 1.5s forwards
+            z-index: 2
+            h2
+                width: max-content
+                height: 39px
+                display: flex
+                align-items: center
+                padding: 0 24px 0 5px
+                font-weight: normal
+                font-size: 22px
+                border-radius: 30px
+                background-color: #e0202042
+
+                span
+                    height: 31px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    margin-right: 13px
+                    color: var(--main2)
+                    background-color: var(--red)
+                    border-radius: 30px
+                    padding: 0 12px 0 12px
+
+            h1
+                color: var(--black)
+                font-size: 60px
+                line-height: 65px
+                margin: 0 0 20px 0
+                padding-bottom: 14px
+                border-bottom: 8px solid #d7dbdf
+
+            p
+                font-size: 22px
+                color: var(--gray)
+                margin: 0 20px 90px 0
+                font-weight: 200
+                line-height: 35px
+                z-index: 1
+
+            a
+                width: 110px
+                height: 110px
+                border-radius: 100%
+                background-color: var(--red)
+                color: whitesmoke
+                box-shadow: 0px 0px 10px 0px var(--red)
+                font-size: 60px
+                margin-left: 50px
+                display: flex
+                align-items: center
+                justify-content: center
+
+                i
+                    animation: HeaderScrollDown 5s infinite ease-in-out
+                    animation-delay: 2s
+
+                    @keyframes HeaderScrollDown
+                        0%, 19%, 100%
+                            transform: translateY(0)
+                        10%
+                            transform: translateY(-18px)
+                        15%
+                            transform: translateY(22px)
+
+            a:hover
+                cursor: pointer
+                transition: 0.3s
+                transform: scale(0.93)
+                box-shadow: 0px 0px 7px 0px var(--LightBlue)
+
+            img
+                position: absolute
+                width: 200px
+                bottom: 10%
+                right: 17%
+
+        // Content > Left (1024px)
+        @media only screen and (max-width: 1024px)
+            #header_left
+                width: 45%
+                height: 640px
+                h2
+                    font-size: 18px
+                    height: 36px
+                    padding: 0 18px 0 5px
+                    span
+                        height: 28px
+                        margin-right: 10px
+                        padding: 0 10px 0 10px
+
+                h1
+                    font-size: 40px
+                    line-height: 48px
+                    margin: 0 0 20px 0
+                    padding-bottom: 14px
+                    border-bottom: 7px solid #d7dbdf
+
+                p
+                    font-size: 18px
+                    margin: 0 20px 60px 0
+                    line-height: 30px
+
+                a
+                    width: 85px
+                    height: 85px
+                    box-shadow: 0px 0px 10px 0px var(--red)
+                    font-size: 52px
+                    margin-left: 50px
+
+                img
+                    width: 150px
+                    bottom: 10%
+                    right: 17%
+
+        // Content > Left (768px)
+        @media only screen and (max-width: 768px)
+            #header_left
+                width: 90%
+                height: 280px
+                margin: 15px 0 -15px 0
+                h2
+                    font-size: 15px
+                    height: 31px
+                    margin-top: -300px
+                    padding: 0 15px 0 3px
+                    span
+                        height: 25px
+                        margin-right: 8px
+                        padding: 0 9px 0 9px
+
+                h1
+                    font-size: 30px
+                    line-height: 40px
+
+                a
+                    width: 70px
+                    height: 70px
+                    font-size: 43px
+                    margin-left: 35px
+                    margin-bottom: -440px
+                    z-index: 1
+
+                img
+                    width: 100px
+                    left: 7%
+                    bottom: -45%
+
+        @keyframes HeaderLeftLoading
+            0%
+                transform: translateX(-350px)
+                opacity: 0
+            100%
+                transform: translateX(0)
+                opacity: 1
+
+
+        // Content > Right
+        #header_right
+            position: relative
+            width: 48%
+            height: 780px
+            display: flex
+            animation: HeaderRightLoading 1.5s forwards
+            #header_orbit
+                position: absolute
+                width: 90%
+                left: 5%
+                bottom: 18%
+
+            i
+                position: absolute
+                bottom: 5%
+                right: 5%
+                transform: rotate(-40deg)
+                font-size: 180px
+                color: #d7dbdf
+
+            #header_car
+                position: absolute
+                bottom: 27%
+                width: 100%
+
+        @keyframes HeaderRightLoading
+            0%
+                transform: translateX(350px)
+                opacity: 0
+            100%
+                transform: translateX(0)
+                opacity: 1
+
+        // Content > Right (1024px)
+        @media only screen and (max-width: 1024px)
+            #header_right
+                width: 45%
+                height: 640px
+                #header_orbit
+                    bottom: 18%
+                i
+                    bottom: 13%
+                    right: 13%
+                    font-size: 95px
+
+                #header_car
+                    bottom: 27%
+                    width: 100%
+
+        // Content > Right (768px)
+        @media only screen and (max-width: 768px)
+            #header_right
+                width: 80%
+                height: 280px
+                #header_orbit
+                    width: 55%
+                    left: 40%
+                    bottom: 7%
+
+                i
+                    bottom: 0
+                    font-size: 70px
+                    right: 9%
+
+                #header_car
+                    bottom: 15%
+                    left: 33%
+                    width: 68%
+
+    // Header > Content (1240px)
+    @media only screen and (max-width: 1240px)
+        > div
+            width: 100%
+
+    // Header > Content (768px)
+    @media only screen and (max-width: 768px)
+        > div
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+
+//Header (1024px)
+@media only screen and (max-width: 1024px)
+    header
+        height: 700px
+
+//Header (768px)
+@media only screen and (max-width: 768px)
+    header
+        height: 620px

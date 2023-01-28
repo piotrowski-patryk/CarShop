@@ -1,0 +1,289 @@
+header {
+  display: flex;
+  width: 1240px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1240px) {
+  header {
+    width: 100%;
+  }
+}
+form {
+  width: 450px;
+  height: 520px;
+  margin: 100px auto 140px auto;
+  background-color: var(--main2);
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form > div {
+  width: 90px;
+  height: 90px;
+  background-color: var(--red);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form > div i {
+  color: var(--main1);
+  font-size: 42px;
+}
+form h1 {
+  color: var(--black);
+  font-size: 42px;
+  margin: 0;
+}
+form label {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+form label .login_icon {
+  position: absolute;
+  left: 7px;
+  bottom: 11px;
+  font-size: 22px;
+  color: var(--gray);
+}
+form label input {
+  width: 215px;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--black);
+  border-bottom: 2px solid var(--gray);
+  padding: 0 35px 0 50px;
+  font-size: 20px;
+}
+form label input[type=password] {
+  font-size: 30px;
+}
+form label input::-moz-placeholder {
+  font-weight: bold;
+  color: var(--gray);
+  font-size: 20px;
+}
+form label input:-ms-input-placeholder {
+  font-weight: bold;
+  color: var(--gray);
+  font-size: 20px;
+}
+form label input::placeholder {
+  font-weight: bold;
+  color: var(--gray);
+  font-size: 20px;
+}
+form label input:focus {
+  border-bottom: 2px solid var(--red);
+}
+form label .login_error {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 28px;
+  color: var(--red);
+}
+form label .login_error-correct {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  font-size: 28px;
+  color: lightgreen;
+}
+form a {
+  position: relative;
+  text-decoration: none;
+  color: var(--black);
+  font-size: 20px;
+  margin: 5px -150px 0 0;
+}
+form a:hover {
+  transform: scale(1.01);
+}
+form button {
+  width: 300px;
+  height: 50px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main1);
+  background-color: var(--red);
+  font-weight: bold;
+  font-size: 20px;
+  border: 0;
+  outline: 0;
+}
+form button:hover {
+  transform: scale(1.012);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1240px) {
+  form {
+    width: 400px;
+    height: 480px;
+    margin: 90px auto 140px auto;
+  }
+  form > div {
+    width: 78px;
+    height: 78px;
+  }
+  form > div i {
+    font-size: 37px;
+  }
+  form h1 {
+    font-size: 38px;
+  }
+  form label {
+    width: 270px;
+    margin-top: 25px;
+  }
+  form label .login_icon {
+    font-size: 19px;
+  }
+  form label input {
+    width: 195px;
+    height: 40px;
+    padding: 0 30px 0 45px;
+    font-size: 19px;
+  }
+  form label input[type=password] {
+    font-size: 28px;
+  }
+  form label input::-moz-placeholder {
+    font-size: 19px;
+  }
+  form label input:-ms-input-placeholder {
+    font-size: 19px;
+  }
+  form label input::placeholder {
+    font-size: 19px;
+  }
+  form label .login_error {
+    font-size: 26px;
+  }
+  form a {
+    font-size: 19px;
+    margin: 5px -130px 0 0;
+  }
+  form button {
+    width: 270px;
+    height: 45px;
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  form {
+    width: 350px;
+    height: 430px;
+    margin: 50px auto 130px auto;
+  }
+  form > div {
+    width: 65px;
+    height: 65px;
+  }
+  form > div i {
+    font-size: 30px;
+  }
+  form h1 {
+    font-size: 30px;
+  }
+  form label {
+    width: 245px;
+    margin-top: 20px;
+  }
+  form label .login_icon {
+    font-size: 17px;
+  }
+  form label input {
+    width: 180px;
+    height: 33px;
+    padding: 0 27px 0 38px;
+    font-size: 17px;
+  }
+  form label input[type=password] {
+    font-size: 26px;
+  }
+  form label input::-moz-placeholder {
+    font-size: 17px;
+  }
+  form label input:-ms-input-placeholder {
+    font-size: 17px;
+  }
+  form label input::placeholder {
+    font-size: 17px;
+  }
+  form label .login_error {
+    font-size: 23px;
+  }
+  form a {
+    font-size: 17px;
+    margin: 5px -120px 0 0;
+  }
+  form button {
+    width: 245px;
+    height: 41px;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  form {
+    width: 320px;
+    height: 380px;
+    margin: 35px auto 95px auto;
+  }
+  form > div {
+    width: 55px;
+    height: 55px;
+  }
+  form > div i {
+    font-size: 25px;
+  }
+  form h1 {
+    font-size: 27px;
+  }
+  form label {
+    width: 230px;
+    margin-top: 17px;
+  }
+  form label .login_icon {
+    font-size: 15px;
+  }
+  form label input {
+    width: 172px;
+    height: 33px;
+    padding: 0 25px 0 33px;
+    font-size: 15px;
+  }
+  form label input[type=password] {
+    font-size: 22px;
+  }
+  form label input::-moz-placeholder {
+    font-size: 15px;
+  }
+  form label input:-ms-input-placeholder {
+    font-size: 15px;
+  }
+  form label input::placeholder {
+    font-size: 15px;
+  }
+  form label .login_error {
+    font-size: 21px;
+  }
+  form a {
+    font-size: 15px;
+    margin: 5px -117px 0 0;
+  }
+  form button {
+    width: 230px;
+    height: 37px;
+    font-size: 13px;
+  }
+}/*# sourceMappingURL=login.css.map */

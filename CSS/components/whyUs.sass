@@ -1,0 +1,202 @@
+/*-----------------| Why Us |-----------------*/
+.whyUs
+    width: 100%
+    height: 700px
+    div
+        width: 1240px
+        height: 100%
+        margin: 0 auto 0 auto
+        display: flex
+        // WhyUs > Left
+        .whyUs_left
+            height: 100%
+            width: 40%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            > h1
+                color: var(--black)
+                font-size: 45px
+                margin: 0 0 35px 5%
+
+            div 
+                width: 90%
+                height: 430px
+                margin-left: 5%
+                display: flex
+                .whyUs_left_punkts
+                    height: 100%
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    z-index: 1
+                    div
+                        width: 70px
+                        height: 70px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        border-radius: 100%
+                        background-color: var(--gray)
+                        color: var(--main1)
+                        font-size: 30px
+
+                .whyUs_left_text
+                    height: 100%
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    border-left: 5px dashed var(--gray)
+                    padding-left: 57px
+                    margin-left: -265px
+                    p
+                        height: 70px
+                        display: flex
+                        align-items: center
+                        font-size: 19px
+                        margin: 0
+
+            // WhyUs > Left (1240px - 1024px)
+            @media only screen and (max-width: 1240px)
+                h1
+                    font-size: 35px
+                div
+                    height: 380px
+                    .whyUs_left_punkts div
+                        width: 60px
+                        height: 60px
+                        font-size: 25px
+
+                    .whyUs_left_text
+                        padding-left: 50px
+                        margin-left: -213px
+                        p
+                            height: 60px
+                            font-size: 17px
+
+            // WhyUs > Left (1024px - 768px)
+            @media only screen and (max-width: 1024px)
+                h1
+                    font-size: 28px
+                    margin: 0 0 25px 5%
+                div
+                    height: 320px
+                    .whyUs_left_punkts div
+                        width: 50px
+                        height: 50px
+                        font-size: 20px
+
+                    .whyUs_left_text
+                        padding-left: 38px
+                        margin-left: -156px
+                        border-left: 4px dashed var(--gray)
+                        p
+                            height: 50px
+                            font-size: 14px
+
+        // WhyUs > Left (768px - 320px)
+        @media only screen and (max-width: 768px)
+            .whyUs_left
+                height: 60%
+                width: 320px
+                margin-right: 35%
+                h1
+                    font-size: 24px
+                    margin: 0 0 17px 1%
+                div
+                    height: 250px
+                    margin-left: 1%
+                    .whyUs_left_punkts div
+                        width: 40px
+                        height: 40px
+                        font-size: 17px
+
+                    .whyUs_left_text
+                        padding-left: 38px
+                        margin-left: -202px
+                        border-left: 3px dashed var(--gray)
+                        p
+                            height: 50px
+                            font-size: 13px
+
+        // WhyUs > Right
+        .whyUs_right
+            position: relative
+            height: 100%
+            width: 60%
+            display: flex
+            justify-content: center
+            align-items: center
+            #whyUs_right_triangle
+                position: absolute
+                bottom: 0
+                left: 10%
+                transform: rotate(25deg)
+                font-size: 200px
+                color: #d7dbdf
+
+            #whyUs_right_dots
+                position: absolute
+                width: 200px
+                top: 9%
+                right: 10%
+
+            #whyUs_right_graphic
+                width: 100%
+                z-index: 1
+
+            // WhyUs > Right (1240px - 1024px)
+            @media only screen and (max-width: 1240px)
+                #whyUs_right_triangle
+                    font-size: 160px
+
+                #whyUs_right_dots
+                    width: 145px
+                    right: 12%
+
+            // WhyUs > Right (1024px - 768px)
+            @media only screen and (max-width: 1024px)
+                #whyUs_right_triangle
+                    font-size: 125px
+
+                #whyUs_right_dots
+                    width: 125px
+                    right: 11%
+
+        // WhyUs > Right (768px - 320px)
+        @media only screen and (max-width: 768px)
+            .whyUs_right
+                width: 320px
+                height: 40%
+                margin-right: 10%
+                #whyUs_right_triangle
+                    font-size: 85px
+                    bottom: -11%
+
+                #whyUs_right_dots
+                    width: 80px
+                    top: -2%
+                    right: 11%
+                
+// WhyUs (1240px - 1024px)
+@media only screen and (max-width: 1240px)
+    .whyUs
+        height: 540px
+        div
+            width: 1024px
+
+// WhyUs (1024px - 768px)
+@media only screen and (max-width: 1024px)
+    .whyUs
+        height: 440px
+        > div
+            width: 768px
+
+// WhyUs (768px - 320px)
+@media only screen and (max-width: 768px)
+    .whyUs
+        height: 580px
+        > div
+            width: 95%
+            flex-direction: column
+            justify-content: center
