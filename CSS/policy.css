@@ -11,27 +11,130 @@ header {
 }
 main {
   width: 1240px;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  margin: 60px auto 120px auto;
+  margin: 80px auto 120px auto;
 }
 main h1 {
-  font-size: 25px;
+  font-size: 30px;
+  margin: 0 2% 30px 2%;
+}
+main h1 i {
+  margin-left: 10px;
+  font-size: 27px;
+}
+main h1 i:hover {
+  cursor: pointer;
+  transform: scale(1.02);
 }
 main p {
   font-weight: 200;
-  font-size: 18px;
+  font-size: 20px;
+  margin: 0 3%;
 }
-main ol li {
-  font-weight: 200;
-  font-size: 18px;
-  margin-bottom: 20px;
+main form {
+  width: 100%;
+  margin: auto;
+  display: none;
+  padding: 0 3%;
+  box-sizing: border-box;
+}
+main form textarea {
+  width: 100%;
+  height: 500px;
+  box-sizing: border-box;
+  padding: 15px;
+  resize: none;
+  font-size: 20px;
+}
+main form button, main form input[type=button] {
+  padding: 14px 22px;
+  background-color: var(--red);
+  color: white;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  border-radius: 16px;
+  font-size: 16px;
+  margin: 15px 30px 0 0;
+}
+main form button:hover, main form input[type=button]:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px gray;
 }
 
 @media only screen and (max-width: 1240px) {
   main {
-    width: 97%;
+    width: 1024px;
     margin: 30px auto 70px auto;
+  }
+  main h1 {
+    font-size: 25px;
+    margin-bottom: 17px;
+  }
+  main h1 i {
+    font-size: 23px;
+  }
+  main p {
+    font-size: 18px;
+  }
+  main form textarea {
+    height: 450px;
+    font-size: 18px;
+    padding: 12px;
+  }
+  main form button, main form input[type=button] {
+    padding: 12px 20px;
+    font-size: 14px;
+    margin: 13px 25px 0 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  main {
+    width: 768px;
+  }
+  main h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  main h1 i {
+    font-size: 20px;
+  }
+  main p {
+    font-size: 16px;
+  }
+  main form textarea {
+    height: 400px;
+    font-size: 16px;
+  }
+  main form button, main form input[type=button] {
+    padding: 11px 19px;
+    font-size: 12px;
+    margin: 11px 20px 0 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main {
+    width: 80%;
+  }
+  main h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  main h1 i {
+    font-size: 17px;
+  }
+  main p {
+    font-size: 13px;
+  }
+  main form textarea {
+    height: 330px;
+    font-size: 13px;
+    padding: 9px;
+  }
+  main form button, main form input[type=button] {
+    padding: 10px 18px;
+    font-size: 10px;
+    margin: 9px 15px 0 0;
   }
 }/*# sourceMappingURL=policy.css.map */

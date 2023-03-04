@@ -157,7 +157,7 @@
     //Function - Formula password
     function PassFormula($password) {
             
-        $FormulaPass = "@^[a-zA-Z0-9'#''_''-''.']+$@";
+        $FormulaPass = "@^[a-zA-Z0-9'#''_''-''.''$']+$@";
 
         if (preg_match($FormulaPass, $password) && (strlen($password) >= 5) && (strlen($password) <= 32)) {
             return true;

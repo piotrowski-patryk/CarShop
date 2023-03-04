@@ -14,7 +14,6 @@ main {
 main .left {
   position: relative;
   width: 40%;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   margin-left: 10%;

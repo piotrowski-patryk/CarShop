@@ -69,11 +69,6 @@ form label input::-moz-placeholder {
   color: var(--gray);
   font-size: 20px;
 }
-form label input:-ms-input-placeholder {
-  font-weight: bold;
-  color: var(--gray);
-  font-size: 20px;
-}
 form label input::placeholder {
   font-weight: bold;
   color: var(--gray);
@@ -160,9 +155,6 @@ form button:hover {
   form label input::-moz-placeholder {
     font-size: 19px;
   }
-  form label input:-ms-input-placeholder {
-    font-size: 19px;
-  }
   form label input::placeholder {
     font-size: 19px;
   }
@@ -214,9 +206,6 @@ form button:hover {
   form label input::-moz-placeholder {
     font-size: 17px;
   }
-  form label input:-ms-input-placeholder {
-    font-size: 17px;
-  }
   form label input::placeholder {
     font-size: 17px;
   }
@@ -266,9 +255,6 @@ form button:hover {
     font-size: 22px;
   }
   form label input::-moz-placeholder {
-    font-size: 15px;
-  }
-  form label input:-ms-input-placeholder {
     font-size: 15px;
   }
   form label input::placeholder {

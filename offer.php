@@ -1,6 +1,8 @@
 <?php
     session_start();
 
+    require_once "Scripts/php/carsData.php";
+
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
     } else {
@@ -34,10 +36,13 @@
     <!-----------------| Scripts |----------------->
     <script defer src="Scripts/JS/mobileMenu.js"></script>
     <script defer src="Scripts/JS/offerInfo.js"></script>
+    <script defer src="Scripts/JS/formEditCar.js"></script>
+    <script defer src="Scripts/JS/carsData.js"></script>
+    <script defer src="Scripts/JS/addCarComponent.js"></script>
 
     <title>MBS rent</title>
 </head>
-<body>
+<body onload="innerCarData(<?php echo $_GET['id']; ?>)">
     <header>
         <nav>
             <a href="StronaGłówna">MBS rent</a>
@@ -66,83 +71,57 @@
 
     <main>
         <section class="offer_top">
-            <?php
-                require_once "Scripts/php/connect.php";
-                $link = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-                $result = mysqli_query($link, "SELECT * FROM cars WHERE id='$id'");
+            <img src="" alt="" class="offer_top_img">
 
-                foreach ($result as $row) {
-                    echo '
-                    <img src="Images/Offers/'.$row['Picture'].'" alt="" class="offer_top_img">
+            <div class="offer_top_data">
+                <div class="offer_top_data_item" id="offerInfo-1" data-id="1" onclick="offerInfo(this)">
+                    <h1>
+                        Dane pojazdu
+                        <?php
+                            if (isset($_SESSION['login'])) {
+                                echo '<i class="fa-solid fa-square-plus" onclick="openFormEditCar(`Dane pojazdu`,'. $_GET['id'] .')"></i>';
+                            }
+                        ?>
+                    </h1>
+                    <div class="data_item_icon">
+                        <i class="bi bi-chevron-up"></i>
+                    </div>
 
-                    <div class="offer_top_data">
-                        <div class="offer_top_data_item" id="offerInfo-1" data-id="1" onclick="offerInfo(this)">
-                            <h1>Dane pojazdu</h1>
-                            <div class="data_item_icon">
-                                <i class="bi bi-chevron-up"></i>
-                            </div>
+                    <div class="data_item_content" id="vehicleData"></div>
+                </div>
 
-                            <div class="data_item_content">
-                                <div>
-                                    <span>MARKA:</span>
-                                    <H1>'.$row['Mark'].'</H1>
-                                </div>
+                <div class="offer_top_data_item" id="offerInfo-2" data-id="2" onclick="offerInfo(this)">
+                    <h1>
+                        Wyposażenie
+                        <?php
+                            if (isset($_SESSION['login'])) {
+                                echo '<i class="fa-solid fa-square-plus" onclick="openFormEditCar(`Wyposażenie`,'. $_GET['id'] .')"></i>';
+                            }
+                        ?>
+                    </h1>
+                    <div class="data_item_icon">
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
 
-                                <div>
-                                    <span>MODEL:</span>
-                                    <H1>'.$row['Model'].'</H1>
-                                </div>
+                    <div class="data_item_content" id="vehicleEquipment"></div>
+                </div>
 
-                                <div>
-                                    <span>PALIWO:</span>
-                                    <H1>'.$row['Fuel'].'</H1>
-                                </div>
+                <div class="offer_top_data_item" id="offerInfo-3" data-id="3" onclick="offerInfo(this)">
+                    <h1>
+                        Inne
+                        <?php
+                            if (isset($_SESSION['login'])) {
+                                echo '<i class="fa-solid fa-square-plus" onclick="openFormEditCar(`Inne`,'. $_GET['id'] .')"></i>';
+                            }
+                        ?>
+                    </h1>
+                    <div class="data_item_icon">
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
 
-                                <div>
-                                    <span>NADWOZIE:</span>
-                                    <H1>'.$row['Body'].'</H1>
-                                </div>
-
-                                <div>
-                                    <span>SKRZYNIA BIEGÓW:</span>
-                                    <H1>'.$row['Gearbox'].'</H1>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="offer_top_data_item" id="offerInfo-2" data-id="2" onclick="offerInfo(this)">
-                            <h1>Wyposażenie</h1>
-                            <div class="data_item_icon">
-                                <i class="bi bi-chevron-down"></i>
-                            </div>
-
-                            <div class="data_item_content">
-                                <div>
-                                    <span>KLIMATYZACJA:</span>
-                                    <H1>'.$row['AirConditioning'].'</H1>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="offer_top_data_item" id="offerInfo-3" data-id="3" onclick="offerInfo(this)">
-                            <h1>Inne</h1>
-                            <div class="data_item_icon">
-                                <i class="bi bi-chevron-down"></i>
-                            </div>
-
-                            <div class="data_item_content">
-                                <div>
-                                    <span>DOSTĘPNE MIEJSCE:</span>
-                                    <H1>'.$row['Space'].'</H1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>';
-                }
-
-                mysqli_free_result($result);
-                mysqli_close($link);
-            ?>
+                    <div class="data_item_content" id="vehicleOtherData"></div>
+                </div>
+            </div>
         </section>
 
         <section class="offer_bottom">
@@ -206,7 +185,7 @@
                                     <td><input type="text" value="'.$row['Limited-4'].'" name="Limited-4"></td>
                                 </tr>
                             </table>
-                            <button><i class="fa-solid fa-pen-to-square"></i> EDYTUJ</button>
+                            <button><i class="fa-solid fa-pen-to-square"></i> ZAPISZ</button>
                         </form>';
                     }
                 }
@@ -220,7 +199,10 @@
     <footer id="Kontakt">
         <div class="footer_top">
             <div class="footer_top_left">
-                <h1>BMS rent</h1>
+                <h1>
+                    BMS rent
+                    <a href="https://carforyou.com.pl" target="_blank"><img src="Images/logo2.webp" alt=""></a>
+                </h1>
                 <p>MBS rent to wypożyczania samochodów w Warszawie z atrakcyjną i elastyczną ofertą dopasowaną do potrzeb Klientów indywidualnych i przedsiębiorców.</p>
             </div>
 
@@ -241,20 +223,34 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-envelope"></i>
-                        email@domena.com
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        email@domena.com
+                        biuro@mbsrent.pl
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="footer_bottom">
-            <h1>© Patryk Piotrowski. All right reserved</h1>
-            <a href="Polityka">Polityka prywatności</a>
+            <a href="https://websidev.pl">© 2023 Patryk Piotrowski | Website by websidev.pl</a>
+            <a href="Regulamin">Regulamin / Polityka prywatności</a>
         </div>
     </footer>
+
+    <!-- Fixed form -->
+    <form action="Scripts/php/formEditCar.php" method="post" class="form-editCar">
+        <h1 class="form-editCar__h1">Dane pojazdu</h1>
+
+        <div class="form-editCar__content"></div>
+
+        <div class="form-editCar__newItem">
+            <input type="text" name="title[]" placeholder="Tytuł" id="newCarTitle">
+            <input type="text" name="description[]" placeholder="Opis" id="newCarDescription">
+            <i class="fa-solid fa-plus" id="btn-addCarItem"></i>
+        </div>
+
+        <div class="form-editCar__btns">
+            <input type="button" value="ANULUJ" onclick="closeFormEditCar()">
+            <input type="submit" value="ZAPISZ">
+        </div>
+    </form>
 </body>
 </html>

@@ -113,7 +113,10 @@
     <footer id="Kontakt">
         <div class="footer_top">
             <div class="footer_top_left">
-                <h1>BMS rent</h1>
+                <h1>
+                    BMS rent
+                    <a href="https://carforyou.com.pl" target="_blank"><img src="Images/logo2.webp" alt=""></a>
+                </h1>
                 <p>MBS rent to wypożyczania samochodów w Warszawie z atrakcyjną i elastyczną ofertą dopasowaną do potrzeb Klientów indywidualnych i przedsiębiorców.</p>
             </div>
 
@@ -134,19 +137,15 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-envelope"></i>
-                        email@domena.com
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        email@domena.com
+                        biuro@mbsrent.pl
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="footer_bottom">
-            <h1>© Patryk Piotrowski. All right reserved</h1>
-            <a href="Polityka">Polityka prywatności</a>
+            <a href="https://websidev.pl">© 2023 Patryk Piotrowski | Website by websidev.pl</a>
+            <a href="Regulamin">Regulamin / Polityka prywatności</a>
         </div>
     </footer>
 </body>

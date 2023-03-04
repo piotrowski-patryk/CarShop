@@ -12,7 +12,6 @@ header {
 main {
   width: 1240px;
   min-height: 600px;
-  max-height: -webkit-max-content;
   max-height: -moz-max-content;
   max-height: max-content;
   margin: 70px auto 80px auto;
@@ -103,7 +102,6 @@ main .managment_left #managment_infoEdit button:hover {
 }
 main .managment_left #managment_users {
   width: 100%;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   display: flex;
@@ -240,228 +238,132 @@ main .managment_left #managment_users .users-item input {
 }
 main .managment_right {
   width: 48%;
-  height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+main .managment_right .managment_right_title {
+  width: 98%;
+  box-sizing: border-box;
+  padding: 0 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+}
+main .managment_right .managment_right_title span {
+  color: var(--gray);
+}
+main .managment_right .managment_right_title span i {
+  margin-left: 5px;
+}
+main .managment_right .managment_right_title #title-marka, main .managment_right .managment_right_title #title-model {
+  width: 22%;
+}
+main .managment_right .managment_right_title #title-zdjecie {
+  width: 11%;
+}
+main .managment_right .managment_right_title #title-del {
+  width: 9%;
+}
+main .managment_right .managment_right_container {
+  height: 500px;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+  margin-bottom: 20px;
 }
-main .managment_right .managment_right_item {
-  position: relative;
+main .managment_right .managment_right_container .managment_right_item {
+  height: 58px;
+  width: 98%;
   box-sizing: border-box;
-  width: 99%;
-  background-color: var(--red);
-  border-radius: 22px;
+  padding: 11px 18px;
   display: flex;
-  flex-direction: column;
-  padding: 20px 30px 30px 40px;
-  margin: 0 1% 22px 0;
-}
-main .managment_right .managment_right_item h1 {
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  min-width: 360px;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  color: var(--main1);
-  border-bottom: 3px solid var(--main1);
-  margin: 0;
-}
-main .managment_right .managment_right_item h1 input {
-  width: 130px;
-  background-color: rgba(0, 0, 0, 0);
-  outline: none;
-  border: none;
-  color: var(--main1);
-  font-weight: bold;
-  font-size: 30px;
-}
-main .managment_right .managment_right_item h1 input::-moz-placeholder {
-  color: var(--gray);
-}
-main .managment_right .managment_right_item h1 input:-ms-input-placeholder {
-  color: var(--gray);
-}
-main .managment_right .managment_right_item h1 input::placeholder {
-  color: var(--gray);
-}
-main .managment_right .managment_right_item #editOffer {
-  position: absolute;
-  color: var(--main1);
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  outline: none;
-  font-size: 28px;
-  top: 17px;
-  right: 17px;
-}
-main .managment_right .managment_right_item #deleteOffer {
-  position: absolute;
-  color: var(--main1);
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  outline: none;
-  font-size: 36px;
-  top: 5.4px;
-  right: 80px;
-}
-main .managment_right .managment_right_item #deleteOffer:hover, main .managment_right .managment_right_item #editOffer:hover {
-  transform: scale(1.02);
-  cursor: pointer;
-}
-main .managment_right .managment_right_item .right_item_content {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 5px;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: var(--main2);
+  font-size: 21px;
 }
-main .managment_right .managment_right_item .right_item_content div {
-  color: var(--main1);
-  font-size: 24px;
-  margin-top: 30px;
-  display: flex;
-}
-main .managment_right .managment_right_item .right_item_content div i {
-  margin-right: 12px;
-}
-main .managment_right .managment_right_item .right_item_content div input, main .managment_right .managment_right_item .right_item_content div select {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  outline: none;
-  border: 1px solid var(--red);
-  color: var(--main1);
-  font-weight: 400;
-  font-size: 20px;
-}
-main .managment_right .managment_right_item .right_item_content div input option, main .managment_right .managment_right_item .right_item_content div select option {
-  background-color: var(--gray);
-}
-main .managment_right .managment_right_item .right_item_content div input::-moz-placeholder {
-  color: var(--gray);
-}
-main .managment_right .managment_right_item .right_item_content div input:-ms-input-placeholder {
-  color: var(--gray);
-}
-main .managment_right .managment_right_item .right_item_content div input::placeholder {
-  color: var(--gray);
-}
-main .managment_right .managment_right_item .right_item_content div select:hover {
-  cursor: pointer;
-}
-main .managment_right .managment_right_item .right_item_content div label {
-  margin-top: -4px;
-}
-main .managment_right .managment_right_item .right_item_content div label span {
-  cursor: pointer;
-  font-size: 22px;
-}
-main .managment_right .managment_right_item .right_item_content div label #inputFile {
-  display: none;
-  background-color: blue;
-}
-main .managment_right .managment_right_item .right_item_content .input-Fuel {
-  width: 35%;
-}
-main .managment_right .managment_right_item .right_item_content .input-Space {
-  width: 11%;
-}
-main .managment_right .managment_right_item .right_item_content .input-Body {
-  width: 35%;
-}
-main .managment_right .managment_right_item .right_item_content .input-Gearbox {
-  width: 37%;
-}
-main .managment_right .managment_right_item .right_item_content .input-AirConditioning {
+main .managment_right .managment_right_container .managment_right_item input[type=text] {
   width: 22%;
+  height: 50%;
+  font-size: 21px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
 }
-main .managment_right .managment_right_item .right_item_content .input-Picture {
-  width: 32%;
+main .managment_right .managment_right_container .managment_right_item input[type=text] .saveBtn:hover, main .managment_right .managment_right_container .managment_right_item input[type=text] .delBtn:hover {
+  cursor: pointer;
+  transform: scale(1.02);
 }
-@media only screen and (max-width: 1240px) {
-  main .managment_right {
-    height: 650px;
-  }
-  main .managment_right .managment_right_item h1 {
-    font-size: 24px;
-    min-width: 270px;
-  }
-  main .managment_right .managment_right_item h1 input {
-    width: 100px;
-    font-size: 22px;
-  }
-  main .managment_right .managment_right_item #editOffer {
-    font-size: 25px;
-    top: 22px;
-  }
-  main .managment_right .managment_right_item #deleteOffer {
-    font-size: 33px;
-    top: 11.7px;
-    right: 75px;
-  }
-  main .managment_right .managment_right_item .right_item_content div i {
-    margin-right: 8px;
-    font-size: 19px;
-  }
-  main .managment_right .managment_right_item .right_item_content div input, main .managment_right .managment_right_item .right_item_content div select {
-    font-size: 16px;
-  }
-  main .managment_right .managment_right_item .right_item_content div label {
-    margin-top: -5px;
-  }
-  main .managment_right .managment_right_item .right_item_content div label span {
-    font-size: 18px;
-  }
+main .managment_right .managment_right_container .managment_right_item label {
+  width: 11%;
+  display: flex;
+  justify-content: center;
 }
-@media only screen and (max-width: 1024px) {
-  main .managment_right {
-    height: 515px;
-    margin: 35px 0 35px 0;
-  }
-  main .managment_right .managment_right_item {
-    padding: 15px 20px 25px 20px;
-  }
-  main .managment_right .managment_right_item h1 {
-    font-size: 19px;
-    min-width: 200px;
-    border-bottom: 2px solid var(--main1);
-  }
-  main .managment_right .managment_right_item h1 input {
-    width: 70px;
-    font-size: 18px;
-  }
-  main .managment_right .managment_right_item #editOffer {
-    font-size: 20px;
-    top: 20px;
-    right: 10px;
-  }
-  main .managment_right .managment_right_item #deleteOffer {
-    font-size: 27px;
-    top: 10.4px;
-    right: 56px;
-  }
-  main .managment_right .managment_right_item .right_item_content div {
-    margin-top: 20px;
-  }
-  main .managment_right .managment_right_item .right_item_content div i {
-    margin-right: 5px;
-    font-size: 16px;
-  }
-  main .managment_right .managment_right_item .right_item_content div input, main .managment_right .managment_right_item .right_item_content div select {
-    font-size: 13px;
-  }
-  main .managment_right .managment_right_item .right_item_content div label {
-    margin-top: -7px;
-  }
-  main .managment_right .managment_right_item .right_item_content div label span {
-    font-size: 14px;
-  }
+main .managment_right .managment_right_container .managment_right_item label #inputFileName {
+  color: var(--gray);
+  font-size: 24px;
 }
-@media only screen and (max-width: 768px) {
-  main .managment_right {
-    width: 100%;
-  }
+main .managment_right .managment_right_container .managment_right_item label #inputFileName:hover {
+  cursor: pointer;
+  transform: scale(1.022);
+}
+main .managment_right .managment_right_container .managment_right_item label #inputFile {
+  display: none;
+}
+main .managment_right .managment_right_container .managment_right_item div {
+  width: 9%;
+  display: flex;
+  justify-content: center;
+}
+main .managment_right .managment_right_container .managment_right_item div input[type=checkbox] {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+main .managment_right .managment_right_settings {
+  height: 40px;
+  width: 96.6%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+}
+main .managment_right .managment_right_settings input[type=submit] {
+  width: 125px;
+  height: 47px;
+  background-color: #90EE90;
+  border: 0;
+  outline: 0;
+  border-radius: 22px;
+  font-weight: bold;
+  font-size: 17px;
+  color: var(--main1);
+  font-family: "Saira Condensed", sans-serif;
+  margin-right: 5%;
+}
+main .managment_right .managment_right_settings input[type=submit]:hover {
+  cursor: pointer;
+  transform: scale(1.015);
+}
+main .managment_right .managment_right_settings #btn-newCar {
+  width: 125px;
+  height: 47px;
+  background-color: var(--gray);
+  border: 0;
+  outline: 0;
+  border-radius: 22px;
+  font-weight: bold;
+  font-size: 17px;
+  color: var(--main1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .managment_right .managment_right_settings #btn-newCar:hover {
+  cursor: pointer;
+  transform: scale(1.015);
 }
 
 @media only screen and (max-width: 1240px) {

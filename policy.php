@@ -45,6 +45,7 @@
 
     <!-----------------| Scripts |----------------->
     <script defer src="Scripts/JS/mobileMenu.js"></script>
+    <script defer src="Scripts/JS/editPolicy.js"></script>
 
     <title>MBS rent</title>
 </head>
@@ -76,50 +77,42 @@
     </div>
 
     <main>
-        <h1>Polityka prywatności</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga porro nulla quae labore atque, earum corrupti quo officia consequatur ipsa, non explicabo ex excepturi nemo similique at iure maxime. Ad, veritatis nulla! Quidem, fugit. Deserunt ipsa facere, officia maxime saepe autem dolores asperiores deleniti minus quasi ad voluptatum ullam?</p>
-        <ol>
-            <li>
-                <b>Lorem, ipsum dolor</b><br>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis obcaecati explicabo voluptatibus autem eius. Ea, dicta illum iste necessitatibus modi, culpa reprehenderit a officiis, pariatur voluptatem cumque ratione quasi eos quaerat magnam eius corporis! Temporibus deleniti animi excepturi ex blanditiis eligendi consequuntur distinctio quidem cupiditate dolor cumque, officia rerum vero.
-            </li>
+        <h1>
+            Regulamin / Polityka prywatności
+            <?php
+                if (isset($_SESSION['login'])) {
+                    echo '<i class="fa-solid fa-pen-to-square" id="btn-openForm"></i>';
+                }
+            ?>
+        </h1>
+        <p id="policyText">
+            <?php
+                require_once "Scripts/php/connect.php";
+                $link = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+                $result = mysqli_query($link, "SELECT `Text` FROM `policy`");
 
-            <li>
-                <b>Lorem, ipsum dolor</b><br>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis obcaecati explicabo voluptatibus autem eius. Ea, dicta illum iste necessitatibus modi, culpa reprehenderit a officiis, pariatur voluptatem cumque ratione quasi eos quaerat magnam eius corporis! Temporibus deleniti animi excepturi ex blanditiis eligendi consequuntur distinctio quidem cupiditate dolor cumque, officia rerum vero.
-            </li>
+                $row = mysqli_fetch_row($result);
+                $policy = $row[0];
+                echo nl2br($policy);
+                
+                mysqli_close($link);
+            ?>
+        </p>
 
-            <li>
-                <b>Lorem, ipsum dolor</b><br>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis obcaecati explicabo voluptatibus autem eius. Ea, dicta illum iste necessitatibus modi, culpa reprehenderit a officiis, pariatur voluptatem cumque ratione quasi eos quaerat magnam eius corporis! Temporibus deleniti animi excepturi ex blanditiis eligendi consequuntur distinctio quidem cupiditate dolor cumque, officia rerum vero.
-            </li>
-
-            <li>
-                <b>Lorem, ipsum dolor</b><br>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis obcaecati explicabo voluptatibus autem eius. Ea, dicta illum iste necessitatibus modi, culpa reprehenderit a officiis, pariatur voluptatem cumque ratione quasi eos quaerat magnam eius corporis! Temporibus deleniti animi excepturi ex blanditiis eligendi consequuntur distinctio quidem cupiditate dolor cumque, officia rerum vero.
-            </li>
-
-            <li>
-                <b>Lorem, ipsum dolor</b><br>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis obcaecati explicabo voluptatibus autem eius. Ea, dicta illum iste necessitatibus modi, culpa reprehenderit a officiis, pariatur voluptatem cumque ratione quasi eos quaerat magnam eius corporis! Temporibus deleniti animi excepturi ex blanditiis eligendi consequuntur distinctio quidem cupiditate dolor cumque, officia rerum vero.
-            </li>
-
-            <li>
-                <b>Lorem, ipsum dolor</b><br>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis obcaecati explicabo voluptatibus autem eius. Ea, dicta illum iste necessitatibus modi, culpa reprehenderit a officiis, pariatur voluptatem cumque ratione quasi eos quaerat magnam eius corporis! Temporibus deleniti animi excepturi ex blanditiis eligendi consequuntur distinctio quidem cupiditate dolor cumque, officia rerum vero.
-            </li>
-
-            <li>
-                <b>Lorem, ipsum dolor</b><br>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis obcaecati explicabo voluptatibus autem eius. Ea, dicta illum iste necessitatibus modi, culpa reprehenderit a officiis, pariatur voluptatem cumque ratione quasi eos quaerat magnam eius corporis! Temporibus deleniti animi excepturi ex blanditiis eligendi consequuntur distinctio quidem cupiditate dolor cumque, officia rerum vero.
-            </li>
-        </ol>
+        <form action="Scripts/php/editPolicy.php" method="post" id="policyForm">
+            <textarea name="text" placeholder="Treść regulaminu"><?php echo $policy; ?></textarea>
+            <button id="btn-save">ZAPISZ</button>
+            <input type="button" value="ANULUJ" id="btn-closeForm">
+        </form>
     </main>
 
     <footer id="Kontakt">
         <div class="footer_top">
             <div class="footer_top_left">
-                <h1>BMS rent</h1>
+                <h1>
+                    BMS rent
+                    <a href="https://carforyou.com.pl" target="_blank"><img src="Images/logo2.webp" alt=""></a>
+                </h1>
                 <p>MBS rent to wypożyczania samochodów w Warszawie z atrakcyjną i elastyczną ofertą dopasowaną do potrzeb Klientów indywidualnych i przedsiębiorców.</p>
             </div>
 
@@ -140,19 +133,15 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-envelope"></i>
-                        email@domena.com
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        email@domena.com
+                        biuro@mbsrent.pl
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="footer_bottom">
-            <h1>© Patryk Piotrowski. All right reserved</h1>
-            <a href="Polityka">Polityka prywatności</a>
+            <a href="https://websidev.pl">© 2023 Patryk Piotrowski | Website by websidev.pl</a>
+            <a href="Regulamin">Regulamin / Polityka prywatności</a>
         </div>
     </footer>
 </body>

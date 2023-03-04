@@ -45,6 +45,8 @@
 
     <!-----------------| Scripts |----------------->
     <script defer src="Scripts/JS/mobileMenu.js"></script>
+    <script defer src="Scripts/JS/managmentCart.js"></script>
+    <script defer src="Scripts/JS/newCar.js"></script>
 
     <title>MBS rent</title>
 </head>
@@ -131,95 +133,31 @@
             </div>
         </div>
 
-        <div class="managment_right">
-            <form action="Scripts/php/offerEdit.php" method="post" autocomplete="off" class="managment_right_item" enctype="multipart/form-data">
-                <h1>#0 - <input type="text" placeholder="Marka" name="Mark"> <input type="text" placeholder="Model" name="Model"></h1>
-                <button id="editOffer"><i class="fa-solid fa-file-circle-plus"></i></button>
-                <div class="right_item_content">
-                    <div class="input-Fuel">
-                        <i class="fa-solid fa-gas-pump"></i> <input type="text" placeholder="Paliwo" name="Fuel">
-                    </div>
+        <form action="Scripts/php/managmentCar.php" method="post" enctype="multipart/form-data" class="managment_right">
+            <div class="managment_right_title">
+                <span id="title-id">ID<i class="fa-solid fa-caret-down"></i></span>
+                <span id="title-marka">MARKA<i class="fa-solid fa-caret-down"></i></span>
+                <span id="title-model">MODEL<i class="fa-solid fa-caret-down"></i></span>
+                <span id="title-zdjecie">ZDJĘCIE<i class="fa-solid fa-caret-down"></i></span>
+                <span id="title-del">USUŃ<i class="fa-solid fa-caret-down"></i></span>
+            </div>
 
-                    <div class="input-Space">
-                        <i class="fa-solid fa-person"></i> <input type="text" placeholder="0" name="Space">
-                    </div>
+            <div class="managment_right_container"></div>
 
-                    <div class="input-Body">
-                        <i class="fa-solid fa-car-side"></i> <input type="text" placeholder="Nadwozie" name="Body">
-                    </div>
-
-                    <div class="input-Gearbox">
-                        <i class="fa-solid fa-gears"></i> <input type="text" placeholder="Skrzynia bieg..." name="Gearbox">
-                    </div>
-
-                    <div class="input-AirConditioning">
-                        <i class="fa-solid fa-fan"></i>
-                        <select name="AirConditioning">
-                            <option value="Nie">Nie</option>
-                            <option value="Tak">Tak</option>
-                        </select>
-                    </div>
-
-                    <div class="input-Picture">
-                        <i class="fa-solid fa-image"></i> <label><span id="inputFileName">Dodaj plik</span> <input type="file" name="Picture" id="inputFile"></label>
-                    </div>
-                </div>
-            </form>
-
-            <?php
-                require_once "Scripts/php/connect.php";
-                $link = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-                $result = mysqli_query($link, "SELECT * FROM cars");
-
-                foreach ($result as $row) {
-                    echo '<form action="Scripts/php/offerEdit.php?id='.$row['ID'].'" method="post" autocomplete="off" class="managment_right_item" enctype="multipart/form-data">';
-                        echo '<h1>#'.$row['ID'].' - <input type="text" placeholder="Marka" name="Mark" value="'.$row['Mark'].'"> <input type="text" placeholder="Model" name="Model" value="'.$row['Model'].'"></h1>';
-                        echo '<button id="editOffer"><i class="fa-solid fa-file-pen"></i></button>';
-                        echo '<a href="Scripts/php/offerDelete.php?id='.$row['ID'].'" id="deleteOffer"><i class="fa-solid fa-delete-left"></i></a>';
-                        echo '<div class="right_item_content">';
-                            echo '<div class="input-Fuel">';
-                                echo '<i class="fa-solid fa-gas-pump"></i> <input type="text" placeholder="Paliwo" name="Fuel" value="'.$row['Fuel'].'">';
-                            echo '</div>';
-
-                            echo '<div class="input-Space">';
-                                echo '<i class="fa-solid fa-person"></i> <input type="text" placeholder="0" name="Space" value="'.$row['Space'].'">';
-                            echo '</div>';
-
-                            echo '<div class="input-Body">';
-                                echo '<i class="fa-solid fa-car-side"></i> <input type="text" placeholder="Nadwozie" name="Body" value="'.$row['Body'].'">';
-                            echo '</div>';
-
-                            echo '<div class="input-Gearbox">';
-                                echo '<i class="fa-solid fa-gears"></i> <input type="text" placeholder="Skrzynia bieg..." name="Gearbox" value="'.$row['Gearbox'].'">';
-                            echo '</div>';
-
-                            echo '<div class="input-AirConditioning">';
-                                echo '<i class="fa-solid fa-fan"></i>';
-                                echo '<select name="AirConditioning">';
-                                    if ($row['AirConditioning'] == 'Tak') {
-                                        echo '<option value="Nie">Nie</option>';
-                                        echo '<option value="Tak" selected>Tak</option>';
-                                    } else {
-                                        echo '<option value="Nie" selected>Nie</option>';
-                                        echo '<option value="Tak">Tak</option>';
-                                    }
-                                echo '</select>';
-                            echo '</div>';
-
-                            echo '<div class="input-Picture">';
-                                echo '<i class="fa-solid fa-image"></i> <label><span id="inputFileName">Dodaj plik</span> <input type="file" name="Picture" id="inputFile"></label>';
-                            echo '</div>';
-                        echo '</div>';
-                    echo '</form>';
-                }
-            ?>
-        </div>
+            <div class="managment_right_settings">
+                <input type="submit" value="Upload">
+                <span id="btn-newCar">DODAJ NOWY</span>
+            </div>
+        </form>
     </main>
 
     <footer id="Kontakt">
         <div class="footer_top">
             <div class="footer_top_left">
-                <h1>BMS rent</h1>
+                <h1>
+                    BMS rent
+                    <a href="https://carforyou.com.pl" target="_blank"><img src="Images/logo2.webp" alt=""></a>
+                </h1>
                 <p>MBS rent to wypożyczania samochodów w Warszawie z atrakcyjną i elastyczną ofertą dopasowaną do potrzeb Klientów indywidualnych i przedsiębiorców.</p>
             </div>
 
@@ -240,19 +178,15 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-envelope"></i>
-                        email@domena.com
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        email@domena.com
+                        biuro@mbsrent.pl
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="footer_bottom">
-            <h1>© Patryk Piotrowski. All right reserved</h1>
-            <a href="Polityka">Polityka prywatności</a>
+            <a href="https://websidev.pl">© 2023 Patryk Piotrowski | Website by websidev.pl</a>
+            <a href="Regulamin">Regulamin / Polityka prywatności</a>
         </div>
     </footer>
 </body>

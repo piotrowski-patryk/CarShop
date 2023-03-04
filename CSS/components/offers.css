@@ -132,7 +132,6 @@
   height: 100%;
   width: 340px;
   border-radius: 22px;
-  display: none;
   align-items: center;
   justify-content: center;
   background-color: red;
@@ -238,7 +237,6 @@
   .offers > div .offers_pictures {
     position: absolute;
     height: 250px;
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     margin: 77px 0 0 3%;

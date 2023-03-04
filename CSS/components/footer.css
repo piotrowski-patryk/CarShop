@@ -23,6 +23,19 @@ footer .footer_top .footer_top_left h1 {
   color: var(--red);
   font-size: 42px;
   margin: 0 0 10px 0;
+  position: relative;
+}
+footer .footer_top .footer_top_left h1 a {
+  width: 150px;
+  position: absolute;
+  margin: -7px 0 0 35px;
+  z-index: 1;
+}
+footer .footer_top .footer_top_left h1 a img {
+  width: 100%;
+}
+footer .footer_top .footer_top_left h1 a:hover {
+  transform: scale(1.01);
 }
 footer .footer_top .footer_top_left p {
   color: var(--black);
@@ -30,6 +43,7 @@ footer .footer_top .footer_top_left p {
   line-height: 28px;
   margin: 0;
   font-weight: 300;
+  z-index: 2;
 }
 footer .footer_top .footer_top_right {
   width: 60%;
@@ -58,6 +72,10 @@ footer .footer_top .footer_top_right ul li i {
   footer .footer_top .footer_top_left h1 {
     font-size: 39px;
   }
+  footer .footer_top .footer_top_left h1 a {
+    width: 125px;
+    margin: -2px 0 0 25px;
+  }
   footer .footer_top .footer_top_left p {
     font-size: 18px;
     line-height: 26px;
@@ -75,6 +93,10 @@ footer .footer_top .footer_top_right ul li i {
   }
   footer .footer_top .footer_top_left h1 {
     font-size: 34px;
+  }
+  footer .footer_top .footer_top_left h1 a {
+    width: 110px;
+    margin: -2px 0 0 20px;
   }
   footer .footer_top .footer_top_left p {
     font-size: 16px;
@@ -98,6 +120,10 @@ footer .footer_top .footer_top_right ul li i {
   }
   footer .footer_top .footer_top_left h1 {
     font-size: 28px;
+  }
+  footer .footer_top .footer_top_left h1 a {
+    width: 92px;
+    margin: -2px 0 0 25px;
   }
   footer .footer_top .footer_top_left p {
     font-size: 13px;

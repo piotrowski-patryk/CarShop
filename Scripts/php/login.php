@@ -5,7 +5,7 @@
     function LoginFormula($login, $password) {
             
         $FormulaEmail = "/^[a-zA-Z0-9.\-_]+@[a-zA-Z0-9\-.]+\.[a-zA-Z]{2,4}$/";
-        $FormulaPass = "@^[a-zA-Z0-9'#''_''-''.']+$@";
+        $FormulaPass = "@^[a-zA-Z0-9'#''_''-''.''$']+$@";
 
         if (preg_match($FormulaEmail, $login) && preg_match($FormulaPass, $password) && (strlen($password) >= 5) && (strlen($password) <= 32)) {
             return true;

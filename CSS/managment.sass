@@ -227,200 +227,128 @@ main
 
     .managment_right
         width: 48%
-        height: 700px
         display: flex
         flex-direction: column
-        overflow-y: scroll
         // Items for offers
-        .managment_right_item
-            position: relative
+        .managment_right_title
+            width: 98%
             box-sizing: border-box
-            width: 99%
-            background-color: var(--red)
-            border-radius: 22px
+            padding: 0 18px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 13px
+            span
+                color: var(--gray)
+                i
+                    margin-left: 5px
+
+            #title-marka, #title-model
+                width: 22%
+
+            #title-zdjecie
+                width: 11%
+
+            #title-del
+                width: 9%
+
+        .managment_right_container
+            height: 500px
             display: flex
             flex-direction: column
-            padding: 20px 30px 30px 40px
-            margin: 0 1% 22px 0
-            h1
-                height: max-content
-                min-width: 360px
-                max-width: max-content
-                color: var(--main1)
-                border-bottom: 3px solid var(--main1)
-                margin: 0
-                input
-                    width: 130px
-                    background-color: #00000000
-                    outline: none
-                    border: none
-                    color: var(--main1)
-                    font-weight: bold
-                    font-size: 30px
-
-                input::placeholder
-                    color: var(--gray)
-
-            #editOffer
-                position: absolute
-                color: var(--main1)
-                background-color: #00000000
-                border: none
-                outline: none
-                font-size: 28px
-                top: 17px
-                right: 17px
-
-            #deleteOffer
-                position: absolute
-                color: var(--main1)
-                background-color: #00000000
-                border: none
-                outline: none
-                font-size: 36px
-                top: 5.4px
-                right: 80px
-
-            #deleteOffer:hover, #editOffer:hover
-                transform: scale(1.02)
-                cursor: pointer
-
-            .right_item_content
-                width: 100%
+            overflow-y: scroll
+            margin-bottom: 20px
+            .managment_right_item
+                height: 58px
+                width: 98%
+                box-sizing: border-box
+                padding: 11px 18px
                 display: flex
-                flex-wrap: wrap
                 justify-content: space-between
-                margin-top: 5px
-                div
-                    color: var(--main1)
-                    font-size: 24px
-                    margin-top: 30px
-                    display: flex
-                    i
-                        margin-right: 12px
+                align-items: center
+                margin-bottom: 20px
+                background-color: var(--main2)
+                font-size: 21px
 
-                    input, select
-                        width: 100%
-                        background-color: #00000000
-                        outline: none
-                        border: 1px solid var(--red)
-                        color: var(--main1)
-                        font-weight: 400
-                        font-size: 20px
-                        option
-                            background-color: var(--gray)
-
-                    input::placeholder
-                        color: var(--gray)
-
-                    select:hover
-                        cursor: pointer
-
-                    label
-                        margin-top: -4px
-                        span
-                            cursor: pointer
-                            font-size: 22px
-
-                        #inputFile
-                            display: none
-                            background-color: blue
-
-                .input-Fuel
-                    width: 35%
-
-                .input-Space
-                    width: 11%
-
-                .input-Body
-                    width: 35%
-
-                .input-Gearbox
-                    width: 37%
-
-                .input-AirConditioning
+                input[type="text"]
                     width: 22%
+                    height: 50%
+                    font-size: 21px
+                    background-color: #00000000
+                    border: none
+                    outline: none
 
-                .input-Picture
-                    width: 32%
+                    .saveBtn:hover, .delBtn:hover
+                        cursor: pointer
+                        transform: scale(1.02)
 
-    // main > Offer edit (1240px - 1024px)
-    @media only screen and (max-width: 1240px)
-        .managment_right
-            height: 650px
-            .managment_right_item
-                h1
-                    font-size: 24px
-                    min-width: 270px
-                    input
-                        width: 100px
-                        font-size: 22px
+                label
+                    width: 11%
+                    display: flex
+                    justify-content: center
+                    #inputFileName
+                        color: var(--gray)
+                        font-size: 24px
 
-                #editOffer
-                    font-size: 25px
-                    top: 22px
+                    #inputFileName:hover
+                        cursor: pointer
+                        transform: scale(1.022)
 
-                #deleteOffer
-                    font-size: 33px
-                    top: 11.7px
-                    right: 75px
+                    #inputFile
+                        display: none
 
-                .right_item_content div
-                    i
-                        margin-right: 8px
-                        font-size: 19px
+                div
+                    width: 9%
+                    display: flex
+                    justify-content: center
+                    input[type="checkbox"]
+                        cursor: pointer
+                        width: 20px
+                        height: 20px
 
-                    input, select
-                        font-size: 16px
 
-                    label
-                        margin-top: -5px
-                        span
-                            font-size: 18px
+        .managment_right_settings
+            height: 40px
+            width: 96.6%
+            box-sizing: border-box
+            display: flex
+            align-items: center
+            font-size: 21px
+            input[type="submit"]
+                width: 125px
+                height: 47px
+                background-color: #90EE90
+                border: 0
+                outline: 0
+                border-radius: 22px
+                font-weight: bold
+                font-size: 17px
+                color: var(--main1)
+                font-family: 'Saira Condensed', sans-serif
+                margin-right: 5%
 
-    // main > Offer edit (1024px - 768px)
-    @media only screen and (max-width: 1024px)
-        .managment_right
-            height: 515px
-            margin: 35px 0 35px 0
-            .managment_right_item
-                padding: 15px 20px 25px 20px
-                h1
-                    font-size: 19px
-                    min-width: 200px
-                    border-bottom: 2px solid var(--main1)
-                    input
-                        width: 70px
-                        font-size: 18px
+            input[type="submit"]:hover
+                cursor: pointer
+                transform: scale(1.015)
 
-                #editOffer
-                    font-size: 20px
-                    top: 20px
-                    right: 10px
+            #btn-newCar
+                width: 125px
+                height: 47px
+                background-color: var(--gray)
+                border: 0
+                outline: 0
+                border-radius: 22px
+                font-weight: bold
+                font-size: 17px
+                color: var(--main1)
+                display: flex
+                align-items: center
+                justify-content: center
 
-                #deleteOffer
-                    font-size: 27px
-                    top: 10.4px
-                    right: 56px
-
-                .right_item_content div
-                    margin-top: 20px
-                    i
-                        margin-right: 5px
-                        font-size: 16px
-
-                    input, select
-                        font-size: 13px
-
-                    label
-                        margin-top: -7px
-                        span
-                            font-size: 14px
-
-    // main > right (768px - 320px)
-    @media only screen and (max-width: 768px)
-        .managment_right
-            width: 100%
+            #btn-newCar:hover
+                cursor: pointer
+                transform: scale(1.015)
+        
 
 // main (1240px - 1024px)
 @media only screen and (max-width: 1240px)

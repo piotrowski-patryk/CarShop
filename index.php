@@ -1,6 +1,8 @@
 <?php
     session_start();
 
+    require_once "Scripts/php/carsData.php";
+
     if (isset($_SESSION['login'])) {
         $login = $_SESSION['login'];
 
@@ -48,7 +50,7 @@
 
     <!-----------------| Scripts |----------------->
     <script defer src="Scripts/JS/mobileMenu.js"></script>
-    <script defer src="Scripts/JS/offers.js"></script>
+    <script defer src="Scripts/JS/scrollingOffers.js"></script>
 
     <title>MBS rent</title>
 </head>
@@ -158,31 +160,7 @@
                 </div>
             </div>
     
-            <div class="offers_pictures">
-                <?php
-                    require_once "Scripts/php/connect.php";
-                    $link = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-
-                    $result = mysqli_query($link, "SELECT ID, Mark, Model, Picture FROM cars");
-
-                    echo '<input type="number" id="carsCount" style="display:none" value="'.mysqli_num_rows($result).'">';
-
-                    $i = 0;
-
-                    foreach ($result as $row) {
-                        $i++;
-
-                        echo '<a href="Oferta?id='.$row['ID'].'" class="offers_pictures_item" id="offer_item'.$i.'">';
-                            echo '<img src="Images/Offers/'.$row["Picture"].'" alt="">';
-                            echo '<h1>'.$row["Mark"].', '.$row["Model"].'</h1>';
-                            echo '<div><i class="fa-solid fa-angle-right"></i></div>';
-                        echo '</a>';
-                    }
-
-                    mysqli_free_result($result);
-                    mysqli_close($link);
-                ?>
-            </div>
+            <div class="offers_pictures"></div>
         </div>
     </section>
 
@@ -201,7 +179,10 @@
     <footer id="Kontakt">
         <div class="footer_top">
             <div class="footer_top_left">
-                <h1>BMS rent</h1>
+                <h1>
+                    BMS rent
+                    <a href="https://carforyou.com.pl" target="_blank"><img src="Images/logo2.webp" alt=""></a>
+                </h1>
                 <p>MBS rent to wypożyczania samochodów w Warszawie z atrakcyjną i elastyczną ofertą dopasowaną do potrzeb Klientów indywidualnych i przedsiębiorców.</p>
             </div>
 
@@ -229,8 +210,8 @@
         </div>
 
         <div class="footer_bottom">
-            <h1>© Patryk Piotrowski. All right reserved</h1>
-            <a href="Polityka">Polityka prywatności</a>
+            <a href="https://websidev.pl">© 2023 Patryk Piotrowski | Website by websidev.pl</a>
+            <a href="Regulamin">Regulamin / Polityka prywatności</a>
         </div>
     </footer>
 </body>
