@@ -1,54 +1,5 @@
 {
-    "cars": [
-        {
-            "ID": "1",
-            "Mark": "Ford",
-            "Model": "Mondeo",
-            "Picture": "offer1.png"
-        },
-        {
-            "ID": "2",
-            "Mark": "Opel",
-            "Model": "Insignia",
-            "Picture": "offer2.png"
-        },
-        {
-            "ID": "3",
-            "Mark": "Renault",
-            "Model": "Talisman",
-            "Picture": "offer3.png"
-        },
-        {
-            "ID": "4",
-            "Mark": "Opel",
-            "Model": "Crossland X",
-            "Picture": "offer4.png"
-        },
-        {
-            "ID": "5",
-            "Mark": "Ford",
-            "Model": "Focus",
-            "Picture": "offer5.png"
-        },
-        {
-            "ID": "6",
-            "Mark": "Skoda",
-            "Model": "Fabia",
-            "Picture": "offer6.png"
-        },
-        {
-            "ID": "7",
-            "Mark": "Fiat",
-            "Model": "Tipo",
-            "Picture": "offer7.png"
-        },
-        {
-            "ID": "8",
-            "Mark": "Fiat",
-            "Model": "500",
-            "Picture": "offer8.png"
-        }
-    ],
+    "cars": [],
     "cars_data": [],
     "cars_equipment": [],
     "cars_other": []

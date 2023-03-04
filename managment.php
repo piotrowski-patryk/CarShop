@@ -147,7 +147,7 @@
             <div class="managment_right_container"></div>
 
             <div class="managment_right_settings">
-                <input type="submit" value="Upload">
+                <input type="submit" value="ZAPISZ">
                 <span id="btn-newCar">DODAJ NOWY</span>
             </div>
         </form>
