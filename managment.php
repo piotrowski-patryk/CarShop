@@ -1,6 +1,8 @@
 <?php
     session_start();
 
+    require_once "Scripts/php/carsData.php";
+
     if (isset($_SESSION['login'])) {
         $login = $_SESSION['login'];
 

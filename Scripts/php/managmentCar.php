@@ -21,26 +21,22 @@
         $result1 = mysqli_query($link, "SELECT * FROM cars");
         $num_rows = mysqli_num_rows($result1);
 
-        echo 'Baza danych: '.$num_rows.'<br>';
-
-        for ($i=0; $i<count($idArr); $i++) {
+        for ($i=0; $i<count($markArr); $i++) {
                 
             $mark = $markArr[$i];
             $model = $modelArr[$i];
 
-            if (isset($idArr)) {
+            if (isset($idArr[$i])) {
                 $id = $idArr[$i];
             }
 
-            if (isset($picture)) {
+            if (isset($pictureArr[$i])) {
                 $picture = $pictureArr[$i];
             }
 
-            if (isset($checkboxArr)) {
+            if (isset($checkboxArr[$i])) {
                 $checkbox = $checkboxArr[$i];
             }
-
-            echo ''
 
             // while ($row = mysqli_fetch_assoc($result1)) {
             //     if ($i <= $num_rows && !empty($title) && !empty($description) && $title !== $row['Title'] || $description !== $row['Description']) {
@@ -48,13 +44,14 @@
             //     }
             // }
 
-            if (($num_rows == 0 || $num_rows-1 < $i) && !empty($mark) && !empty($model) && !empty($picture)) {
-
+            if (($num_rows == 0 || $num_rows-1 < $i) && !empty($mark) && !empty($model) && isset($pictureArr[$i])) {
+                $id++;
                 $file_name = "offer".$id.".png";
                 $temp_name = $picture["tmp_name"];
-                move_uploaded_file($temp_name, $file_name);
+                $file_store = "../../Images/Offers/".$file_name;
+                move_uploaded_file($temp_name, $file_store);
 
-                $result2 = mysqli_query($link, "INSERT INTO cars(`Mark`, `Model`, `Picture`) VALUES ('$mark','$model','$file_name')");
+                $result2 = mysqli_query($link, "INSERT INTO cars(`ID`, `Mark`, `Model`, `Picture`) VALUES ('$id','$mark','$model','$file_name')");
             }
 
             // if (isset($checkbox) && !empty($checkbox)) {
@@ -63,6 +60,7 @@
         }
 
         mysqli_close($link);
+        header('Location: ../../Zarządzanie');
 
     } else {
         header('Location: ../../Zarządzanie');
