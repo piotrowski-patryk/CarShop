@@ -1,15 +1,12 @@
 <?php
-    if (isset($_POST["Mark"]) && isset($_POST["Model"])) {
+    if (isset($_POST["Mark"]) && isset($_POST["Model"]) && isset($_FILES["Picture"]) && !empty($_POST["Mark"]) && !empty($_POST["Model"]) && !empty($_FILES["Picture"])) {
 
         $markArr = $_POST["Mark"];
         $modelArr = $_POST["Model"];
+        $pictureArr = $_FILES["Picture"];
 
         if (isset($_POST['ID'])) {
             $idArr = $_POST["ID"];
-        }
-
-        if (isset($_FILES["Picture"])) {
-            $pictureArr = $_FILES["Picture"];
         }
 
         if (isset($_POST["checkbox"])) {
@@ -22,16 +19,20 @@
         $num_rows = mysqli_num_rows($result1);
 
         for ($i=0; $i<count($markArr); $i++) {
-                
+            
             $mark = $markArr[$i];
             $model = $modelArr[$i];
 
             if (isset($idArr[$i])) {
                 $id = $idArr[$i];
-            }
-
-            if (isset($pictureArr[$i])) {
-                $picture = $pictureArr[$i];
+            } else {
+                if ($num_rows-1 < $i) {
+                    $id++;
+                }
+    
+                if ($num_rows==0 && $i==0) {
+                    $id = 1;
+                }
             }
 
             if (isset($checkboxArr[$i])) {
@@ -44,10 +45,10 @@
             //     }
             // }
 
-            if (($num_rows == 0 || $num_rows-1 < $i) && !empty($mark) && !empty($model) && isset($pictureArr[$i])) {
-                $id++;
+            if (($num_rows == 0 || $num_rows-1 < $i) && !empty($mark) && !empty($model) && isset($pictureArr['name'][$i])) {
+
                 $file_name = "offer".$id.".png";
-                $temp_name = $picture["tmp_name"];
+                $temp_name = $pictureArr['tmp_name'][$i];
                 $file_store = "../../Images/Offers/".$file_name;
                 move_uploaded_file($temp_name, $file_store);
 
