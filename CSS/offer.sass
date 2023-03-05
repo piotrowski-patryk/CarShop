@@ -105,6 +105,9 @@ main
     @media only screen and (max-width: 1240px)
         .offer_top
             height: 450px
+            .offer_top_img
+                max-height: 410px
+
             .offer_top_data .offer_top_data_item
                 min-height: 60px
                 margin-bottom: 22px
@@ -131,6 +134,9 @@ main
     @media only screen and (max-width: 1024px)
         .offer_top
             height: 350px
+            .offer_top_img
+                max-height: 340px
+
             .offer_top_data .offer_top_data_item
                 min-height: 20px
                 margin-bottom: 0px
@@ -160,6 +166,7 @@ main
             flex-direction: column
             .offer_top_img
                 width: 100%
+                max-height: 100%
 
             .offer_top_data
                 width: 100%
@@ -250,6 +257,7 @@ main
     @media only screen and (max-width: 1240px)
         .offer_bottom
             height: 230px
+            margin-top: -20px
             form button
                 font-size: 18px
                 i
@@ -265,6 +273,7 @@ main
     @media only screen and (max-width: 1024px)
         .offer_bottom
             height: 160px
+            margin-top: 0
             form button
                 font-size: 16px
                 i
@@ -280,6 +289,7 @@ main
     @media only screen and (max-width: 1024px)
         .offer_bottom
             height: 190px
+            margin-top: 10px
             form button
                 font-size: 14px
                 bottom: -25px
@@ -427,3 +437,124 @@ main
 
         input[type="submit"]
             background-color: var(--red)
+
+// Form for edit car (1240px - 1024px)
+@media only screen and (max-width: 1240px)
+    .form-editCar
+        width: 440px
+        height: 520px
+        top: 100px
+        padding: 25px 30px
+        margin-left: -220px
+        h1
+            font-size: 32px
+
+        .form-editCar__content .form-editCar__item
+            height: 52px
+            padding: 2px 12px
+            margin-bottom: 17px
+            input
+                font-size: 17px
+
+            label i
+                font-size: 26px
+
+        .form-editCar__newItem
+            height: 52px
+            padding: 2px 12px
+            margin-bottom: 21px
+            i
+                font-size: 25px
+
+            input
+                font-size: 17px
+
+        .form-editCar__btns input
+            margin-left: 20px
+            width: 103px
+            height: 37px
+            font-size: 12px
+
+// Form for edit car (1024px - 768px)
+@media only screen and (max-width: 1024px)
+    .form-editCar
+        width: 400px
+        height: 490px
+        top: 85px
+        padding: 20px 25px
+        margin-left: -200px
+        h1
+            font-size: 28px
+
+        .form-editCar__content .form-editCar__item
+            height: 47px
+            padding: 2px 12px
+            margin-bottom: 15px
+            input
+                font-size: 15px
+
+            label i
+                font-size: 24px
+
+        .form-editCar__newItem
+            height: 47px
+            padding: 2px 12px
+            margin-bottom: 15px
+            i
+                font-size: 22px
+
+            input
+                font-size: 15px
+
+        .form-editCar__btns input
+            margin-left: 20px
+            width: 95px
+            height: 34px
+            font-size: 11px
+
+// Form for edit car (768px - 380px)
+@media only screen and (max-width: 768px)
+    .form-editCar
+        width: 360px
+        height: 450px
+        top: 70px
+        padding: 10px 15px
+        margin-left: -180px
+        h1
+            font-size: 22px
+
+        .form-editCar__content .form-editCar__item
+            height: 43px
+            padding: 2px 12px
+            margin-bottom: 13px
+            input
+                font-size: 13px
+
+            label i
+                font-size: 21px
+
+        .form-editCar__newItem
+            height: 43px
+            padding: 2px 12px
+            margin-bottom: 0
+            i
+                font-size: 21px
+
+            input
+                font-size: 13px
+
+        .form-editCar__btns input
+            margin-left: 20px
+            width: 88px
+            height: 32px
+            font-size: 10px
+            margin-bottom: 8px
+
+// Form for edit car (380px - 320)
+@media only screen and (max-width: 380px)
+    @media only screen and (max-width: 768px)
+    .form-editCar
+        width: 96%
+        left: 0
+        margin-left: 2% 
+        padding: 10px 10px
