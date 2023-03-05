@@ -4,32 +4,33 @@
         $type = $_GET['type'];
         $car_id = $_GET['car_id'];
 
-        $idArr = $_POST["id"];
         $titleArr = $_POST["title"];
         $descriptionArr = $_POST["description"];
 
-        if (isset($_POST["checkbox"])) {
-            $checkboxArr = $_POST["checkbox"];
+        if (isset($_POST["id"])) {
+            $idArr = $_POST["id"];
         }
 
         require_once "connect.php";
         $link = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
         $result1 = mysqli_query($link, "SELECT * FROM $type WHERE Car_ID='$car_id'");
         $num_rows = mysqli_num_rows($result1);
+        $rows = mysqli_fetch_all($result1, MYSQLI_ASSOC);
 
-        for ($i=0; $i<count($idArr); $i++) {
+        for ($i=0; $i<count($titleArr); $i++) {
                 
-            $id = $idArr[$i];
             $title = $titleArr[$i];
             $description = $descriptionArr[$i];
+            $checkbox = $checkboxArr[$i];
 
-            if (isset($checkboxArr)) {
-                $checkbox = $checkboxArr[$i];
-            }
+            if (isset($idArr[$i])) {
+                $id = $idArr[$i];
+            } else {
 
-            while ($row = mysqli_fetch_assoc($result1)) {
-                if ($i <= $num_rows && !empty($title) && !empty($description) && $title !== $row['Title'] || $description !== $row['Description']) {
-                    $result2 = mysqli_query($link, "UPDATE $type SET `Title`='$title',`Description`='$description' WHERE ID='$id'");
+                if ($num_rows==0 && $i==0) {
+                    $id = 1;
+                } elseif ($num_rows-1 < $i) {
+                    $id++;
                 }
             }
 
@@ -37,8 +38,19 @@
                 $result2 = mysqli_query($link, "INSERT INTO $type(`Car_ID`, `Title`, `Description`) VALUES ('$car_id','$title','$description')");
             }
 
-            if (isset($checkbox) && !empty($checkbox)) {
-                $result2 = mysqli_query($link, "DELETE FROM $type WHERE ID='$id'");
+            if ($num_rows > 0 && $i < $num_rows) {
+                if (!empty($title) && !empty($description) && $title !== $rows[$i]['Title'] || $description !== $rows[$i]['Description']) {
+                    $result2 = mysqli_query($link, "UPDATE $type SET `Title`='$title',`Description`='$description' WHERE ID='$id'");
+                }
+            }
+        }
+
+        
+        if(isset($_POST['checkbox'])) {
+            $checkbox = $_POST['checkbox'];
+
+            foreach($checkbox as $checked_id) {
+                $result2 = mysqli_query($link, "DELETE FROM $type WHERE ID='$checked_id'");
             }
         }
 

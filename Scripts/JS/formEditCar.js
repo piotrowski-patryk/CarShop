@@ -15,10 +15,10 @@ function openFormEditCar(type, id) {
                 cars_type.forEach(car => {
                     document.querySelector('.form-editCar__content').innerHTML += `
                         <div class="form-editCar__item">
-                            <input type="hidden" name="id[]" value="${car.ID}>
+                            <input type="hidden" name="id[]" value="${car.ID}">
                             <input type="text" value="${car.Title}" name="title[]" placeholder="Tytuł">
                             <input type="text" value="${car.Description}" name="description[]" placeholder="Opis">
-                            <input type="checkbox" id="checkbox-${car.ID}" name="checkbox[]">
+                            <input type="checkbox" id="checkbox-${car.ID}" name="checkbox[]" value="${car.ID}">
 
                             <label for="checkbox-${car.ID}">
                                 <i class="fa-solid fa-trash-can" id="trash-${car.ID}" onclick="setTrashColor(${car.ID})"></i>
@@ -38,10 +38,10 @@ function openFormEditCar(type, id) {
                 cars_type.forEach(car => {
                     document.querySelector('.form-editCar__content').innerHTML += `
                         <div class="form-editCar__item">
-                            <input type="hidden" name="id[]" value="${car.ID}>
+                            <input type="hidden" name="id[]" value="${car.ID}">
                             <input type="text" value="${car.Title}" name="title[]" placeholder="Tytuł">
                             <input type="text" value="${car.Description}" name="description[]" placeholder="Opis">
-                            <input type="checkbox" id="checkbox-${car.ID}" name="checkbox[]">
+                            <input type="checkbox" id="checkbox-${car.ID}" name="checkbox[]" value="${car.ID}">
 
                             <label for="checkbox-${car.ID}">
                                 <i class="fa-solid fa-trash-can" id="trash-${car.ID}" onclick="setTrashColor(${car.ID})"></i>
@@ -61,10 +61,10 @@ function openFormEditCar(type, id) {
                 cars_type.forEach(car => {
                     document.querySelector('.form-editCar__content').innerHTML += `
                         <div class="form-editCar__item">
-                            <input type="hidden" name="id[]" value="${car.ID}>
+                            <input type="hidden" name="id[]" value="${car.ID}">
                             <input type="text" value="${car.Title}" name="title[]" placeholder="Tytuł">
                             <input type="text" value="${car.Description}" name="description[]" placeholder="Opis">
-                            <input type="checkbox" id="checkbox-${car.ID}" name="checkbox[]">
+                            <input type="checkbox" id="checkbox-${car.ID}" name="checkbox[]" value="${car.ID}">
 
                             <label for="checkbox-${car.ID}">
                                 <i class="fa-solid fa-trash-can" id="trash-${car.ID}" onclick="setTrashColor(${car.ID})"></i>

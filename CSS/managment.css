@@ -286,7 +286,7 @@ main .managment_right .managment_right_container .managment_right_item {
 }
 main .managment_right .managment_right_container .managment_right_item input[type=text] {
   width: 22%;
-  height: 50%;
+  height: 60%;
   font-size: 21px;
   background-color: rgba(0, 0, 0, 0);
   border: none;

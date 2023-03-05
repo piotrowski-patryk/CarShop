@@ -9,7 +9,7 @@ fetch('Scripts/dataCars.json').then(response => response.json()).then(data => {
                 <input type="text" placeholder="Marka" value="${data.cars[i].Mark}" name="Mark[]">
                 <input type="text" placeholder="Model" value="${data.cars[i].Model}" name="Model[]">
                 <label><i class="fa-solid fa-camera" id="inputFileName"></i> <input type="file" name="Picture[]" id="inputFile"></label>
-                <div><input type="checkbox" name="checkbox[]"></div>
+                <div><input type="checkbox" name="checkbox[]" value="${data.cars[i].ID}"></div>
             </div>
         `;
     }
