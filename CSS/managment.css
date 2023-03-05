@@ -252,6 +252,8 @@ main .managment_right .managment_right_title {
 }
 main .managment_right .managment_right_title span {
   color: var(--gray);
+  display: flex;
+  align-items: center;
 }
 main .managment_right .managment_right_title span i {
   margin-left: 5px;
@@ -364,6 +366,155 @@ main .managment_right .managment_right_settings #btn-newCar {
 main .managment_right .managment_right_settings #btn-newCar:hover {
   cursor: pointer;
   transform: scale(1.015);
+}
+@media only screen and (max-width: 1240px) {
+  main .managment_right .managment_right_title {
+    margin-bottom: 10px;
+  }
+  main .managment_right .managment_right_title span {
+    font-size: 14px;
+  }
+  main .managment_right .managment_right_title span i {
+    margin-left: 5px;
+  }
+  main .managment_right .managment_right_container {
+    height: 440px;
+    margin-bottom: 20px;
+  }
+  main .managment_right .managment_right_container .managment_right_item {
+    height: 58px;
+    padding: 11px 18px;
+    margin-bottom: 14px;
+    font-size: 18px;
+  }
+  main .managment_right .managment_right_container .managment_right_item input[type=text] {
+    font-size: 18px;
+  }
+  main .managment_right .managment_right_container .managment_right_item label #inputFileName {
+    font-size: 23px;
+  }
+  main .managment_right .managment_right_container .managment_right_item div input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+  }
+  main .managment_right .managment_right_settings {
+    height: 45px;
+  }
+  main .managment_right .managment_right_settings input[type=submit] {
+    width: 120px;
+    height: 45px;
+    border-radius: 22px;
+    font-size: 16px;
+    margin-right: 5%;
+  }
+  main .managment_right .managment_right_settings #btn-newCar {
+    width: 120px;
+    height: 45px;
+    border-radius: 22px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  main .managment_right .managment_right_title {
+    margin-bottom: 7px;
+  }
+  main .managment_right .managment_right_title span {
+    font-size: 12px;
+  }
+  main .managment_right .managment_right_title span i {
+    margin-left: 4px;
+  }
+  main .managment_right .managment_right_container {
+    height: 357px;
+    margin-bottom: 13px;
+  }
+  main .managment_right .managment_right_container .managment_right_item {
+    height: 45px;
+    padding: 9px 18px;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+  main .managment_right .managment_right_container .managment_right_item input[type=text] {
+    font-size: 13px;
+  }
+  main .managment_right .managment_right_container .managment_right_item label #inputFileName {
+    font-size: 20px;
+  }
+  main .managment_right .managment_right_container .managment_right_item div input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+  }
+  main .managment_right .managment_right_settings {
+    height: 45px;
+  }
+  main .managment_right .managment_right_settings input[type=submit] {
+    width: 105px;
+    height: 38px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 5%;
+    font-weight: normal;
+  }
+  main .managment_right .managment_right_settings #btn-newCar {
+    width: 105px;
+    height: 38px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .managment_right {
+    width: 100%;
+    margin: 40px 0 80px 0;
+  }
+  main .managment_right .managment_right_title {
+    margin-bottom: 7px;
+  }
+  main .managment_right .managment_right_title span {
+    font-size: 12px;
+  }
+  main .managment_right .managment_right_title span i {
+    margin-left: 4px;
+  }
+  main .managment_right .managment_right_container {
+    height: 357px;
+    margin-bottom: 13px;
+  }
+  main .managment_right .managment_right_container .managment_right_item {
+    height: 45px;
+    padding: 9px 18px;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+  main .managment_right .managment_right_container .managment_right_item input[type=text] {
+    font-size: 13px;
+  }
+  main .managment_right .managment_right_container .managment_right_item label #inputFileName {
+    font-size: 20px;
+  }
+  main .managment_right .managment_right_container .managment_right_item div input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+  }
+  main .managment_right .managment_right_settings {
+    height: 45px;
+  }
+  main .managment_right .managment_right_settings input[type=submit] {
+    width: 105px;
+    height: 38px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 5%;
+    font-weight: normal;
+  }
+  main .managment_right .managment_right_settings #btn-newCar {
+    width: 105px;
+    height: 38px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: normal;
+  }
 }
 
 @media only screen and (max-width: 1240px) {
